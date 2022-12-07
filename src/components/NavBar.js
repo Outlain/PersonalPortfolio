@@ -46,9 +46,9 @@ export const NavBar = () => {
                         <Nav.Link href="#projects" className={ativeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
                         <span className='navbar-text'>
                             <div className='social-icon'>
-                                <a href='#'><img src={navIcon1} alt=""></img></a>
+                                <a href='#skills'><img src={navIcon1} alt=""></img></a>
                             </div>
-                            <button className="vvd" onCick={() => console.log('connect')}>
+                            <button className="vvd">
                                 <span>Let's Connect</span>
                             </button>
                         </span>
