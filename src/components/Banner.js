@@ -29,6 +29,18 @@ export const Banner = () => {
     }, []);
 
     useEffect(() => {
+        console.log(quotes)
+        if (quotes) {
+            quotes.sort((a, b) => {
+                if (a.length < b.length) return 1;
+                if (a.length > b.length) return -1;
+                return 0;
+            });
+        }
+        console.log(quotes)
+    }, [quotes]);
+    // if (quotes) { console.log(quotes)}
+    useEffect(() => {
         let ticker = setInterval(() => {
             tick();
         }, delta)
