@@ -401,6 +401,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   justify-content: end;
   /* background-color: red; */
 }
+.project-one p {
+  width: 50%;
+}
 .project-two {
   height: 10%;
   width: 100%;
@@ -463,7 +466,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project-inner-inner:hover {
   border: 0.2rem solid #184047;
   transform: scale(1.05);
-
 }
 .project-inner-inner h2 {
   text-shadow: 5px 5px 0 #000;
@@ -623,6 +625,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 0.5rem;
   border: 0.2rem solid white;
 }
+.connect-right form:hover {
+  transform: scale(1.1) translateY(-10%);
+}
+
 .connect-right-message {
   grid-column: 1 / span 2;
   grid-column-start: 1;
@@ -635,6 +641,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 #connect span {
   height: 100%;
   width: 100%;
+}
+#connect span:hover {
+  transform: scale(1.01) translateY(-5%);
 }
 #connect span input {
   height: 100%;
@@ -650,4 +659,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 #connect button:hover {
   background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+}
+.connect-right-result {
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

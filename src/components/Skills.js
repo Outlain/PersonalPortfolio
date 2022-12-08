@@ -11,7 +11,7 @@ export const Skills = () => {
                 <div className="skills-left-top">
                 </div>
                 <div className="skills-left-middle">
-                    <h1>Languages tools and libraries </h1>
+                    <h1>Languages, tools and libraries </h1>
                 </div>
                 <div className="skills-left-bottom">
                     <div className="skills-spinning">

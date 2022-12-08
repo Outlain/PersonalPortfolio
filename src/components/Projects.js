@@ -51,7 +51,7 @@ export const Projects = () => {
             <div className="dimmer2">
                 <section className="project-one">
                     <h1>Projects</h1>
-                    <p>Pariatur et ea commodo non labore culpa. Non dolor minim labore incididunt consectetur proident. Ex velit magna id in amet. Ad est occaecat sit labore.</p>
+                    <p>These are the projects I have worked on ranging from hours to days to weeks to complete! <br/> They are organized into three actagories, Mini-games (usually through CANVAS or PyGame), Full-Stack websites that range from API to full CRUD, and MISC for all others!</p>
                 </section>
                 <section className="project-two">
                     <button onClick={handleOnclickGames} className="left">Games</button>

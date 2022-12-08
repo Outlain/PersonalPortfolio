@@ -69,7 +69,6 @@ export const Banner = () => {
                         <span className="tagline">Welcome to my Portfolio</span>
                         <h1>{`Hello, I'm Carlos Amado Roller `} <br /><br /><span className="wrap">{text}</span></h1>
                         <p>I'm a full Stack web Developer passionate about creating the projects of the future</p>
-                        <button>Lets connect <ArrowRightCircle size={25}></ArrowRightCircle></button>
                     </Col>
                     <Col className="what" xs={12} md={6} xl={5}>
                         <h5 className="creation1">{quotes ? quotes[0].author : ''} <br /> <p>{quotes ? quotes[0].text : ''}</p> </h5>

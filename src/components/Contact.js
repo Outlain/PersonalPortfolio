@@ -77,9 +77,9 @@ export const Contact = () => {
                     </span>
                     <span>
                         <input
-                            type="tel"
+                            type="text"
                             value={formDetails.phone}
-                            PlaceHolder="Phone Number"
+                            PlaceHolder="Company Name (optional)"
                             onChange={(e) => onFormUpdate('phone', e.target.value)}
                         />
                     </span>
@@ -91,8 +91,8 @@ export const Contact = () => {
                     </button>
                     {
                         status.message &&
-                        <span>
-                            <p className={status.succes === false ? 'danger' : "sucess"}>{status.message}</p>
+                        <span className="connect-right-result">
+                            <p className={status.succes === false ? 'There was an error' : "sucess"}>{status.message}</p>
                         </span>
                     }
                 </form>
