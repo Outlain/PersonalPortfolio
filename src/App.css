@@ -314,6 +314,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 3fr 1fr 1fr;
   height: 50vh;
+  overflow: visible;
 }
 .banner-right h6 {
   margin: 0;
@@ -325,6 +326,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: auto;
 }
 .banner-right-right {
   grid-column: 3;
@@ -334,6 +336,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   justify-content: center;
   align-items: center;
   writing-mode: vertical-rl;
+  overflow: auto;
 }
 .banner-right-left-top-left {
   border: 0.02rem solid rgba(255, 255, 255, 0.5);
@@ -341,6 +344,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   justify-content: center;
   align-items: center;
   writing-mode: vertical-rl;
+  overflow: auto;
 }
 .banner-right-left-top-right {
   border: 0.02rem solid rgba(255, 255, 255, 0.5);
@@ -348,6 +352,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   justify-content: center;
   align-items: center;
   writing-mode: vertical-rl;
+  overflow: auto;
 }
 .banner-right-left-bottom-top {
   grid-row: 3;
@@ -356,6 +361,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: auto;
 }
 .banner-right-left-bottom-bottom {
   grid-row: 4;
@@ -364,6 +370,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: auto;
 }
 .creation1 {
   animation: rip 7s linear infinite;
