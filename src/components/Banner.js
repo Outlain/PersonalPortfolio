@@ -7,7 +7,7 @@ export const Banner = () => {
     const toRotate = ["Full-Stack Developer", "Web Designer", "UX/UI Designer"]
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100)
-    const period = 1000;
+    const period = 500;
     const [quotes, SetQuotes] = useState(null);
 
     useEffect(() => {
@@ -26,7 +26,8 @@ export const Banner = () => {
         console.log('once')
         if (quotes) { console.log(quotes) }
 
-    }, [])
+    }, []);
+
     useEffect(() => {
         let ticker = setInterval(() => {
             tick();
@@ -44,7 +45,7 @@ export const Banner = () => {
         setText(updatedText);
 
         if (isDeleting) {
-            setDelta(prevDelta => prevDelta / 2)
+            setDelta(prevDelta => prevDelta / 1.3)
         }
 
         if (!isDeleting && updatedText === fullText) {
@@ -53,7 +54,7 @@ export const Banner = () => {
         } else if (isDeleting && updatedText === '') {
             setIsDeleting(false);
             setLoopNum(loopNum + 1);
-            setDelta(500);
+            setDelta(300);
         }
     }
 

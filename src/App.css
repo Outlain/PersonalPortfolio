@@ -385,6 +385,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   0% {
     transform: translateX(0px);
   }
+  15% {
+    transform: translateX(0px);
+  }
   50% {
     transform: translateX(-50px);
   }
@@ -400,6 +403,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 @keyframes updown {
   0% {
+    transform: translateY(0px);
+  }
+  15% {
     transform: translateY(0px);
   }
   50% {
