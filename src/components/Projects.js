@@ -27,23 +27,63 @@ export const Projects = () => {
     ]
     const misc = [
         {
-            title: "Crypto API",
-            description: 'Crypto Website with real time crypto news and crypto prices',
-            imgUrl: projectImg1,
-            link: 'https://carlos-game-fightingko.netlify.app/'
+            title: "",
+            description: '',
+            imgUrl: '',
+            link: ''
         },
     ]
 
-    const [projectType, setProjectType] = useState(fullStack)
+    const empty = [
+
+    ]
+
+    const [projectType, setProjectType] = useState(empty)
 
     const handleOnclickGames = () => {
-        setProjectType(games)
+        if (projectType.length > 0) {
+            if (projectType[0].title == games[0].title) {
+                console.log(projectType[0].title)
+                setProjectType(empty)
+            }
+            if (projectType[0].title != games[0].title) {
+                console.log(projectType[0].title)
+                setProjectType(games)
+            }
+        }
+        if (projectType.length == 0) {
+            setProjectType(games)
+        }
     }
     const handleOnclickFullStack = () => {
-        setProjectType(fullStack)
+        if (projectType.length > 0) {
+            if (projectType[0].title == fullStack[0].title) {
+                console.log(projectType[0].title)
+                setProjectType(empty)
+            }
+            if (projectType[0].title != fullStack[0].title) {
+                console.log(projectType[0].title)
+                setProjectType(fullStack)
+            }
+        }
+        if (projectType.length == 0) {
+            setProjectType(fullStack)
+        }
     }
     const handleOnclickMisc = () => {
-        setProjectType(misc)
+        if (projectType.length > 0) {
+            if (projectType[0].title == misc[0].title) {
+                console.log(projectType[0].title)
+                setProjectType(empty)
+            }
+            if (projectType[0].title != misc[0].title) {
+                console.log(projectType[0].title)
+                setProjectType(misc)
+            }
+        }
+        if (projectType.length == 0) {
+            setProjectType(misc)
+        }
     }
 
     return (
@@ -51,7 +91,7 @@ export const Projects = () => {
             <div className="dimmer2">
                 <section className="project-one">
                     <h1>Projects</h1>
-                    <p>These are the projects I have worked on ranging from hours to days to weeks to complete! <br/> They are organized into three actagories, Mini-games (usually through CANVAS or PyGame), Full-Stack websites that range from API to full CRUD, and MISC for all others!</p>
+                    <p>These are the projects I have worked on ranging from hours to days to weeks to complete! <br /> They are organized into three actagories, Mini-games (usually through CANVAS or PyGame), Full-Stack websites that range from API to full CRUD, and MISC for all others!</p>
                 </section>
                 <section className="project-two">
                     <button onClick={handleOnclickGames} className="left">Games</button>

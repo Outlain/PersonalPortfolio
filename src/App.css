@@ -582,8 +582,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   gap: 1rem;
   background: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.8),
+    rgba(54, 54, 54, 0.3) 50%,
     rgba(0, 0, 0, 0.8)
   );
 }
@@ -610,10 +610,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
 }
 .connect-right form {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   height: 60%;
   width: 80%;
   display: grid;
