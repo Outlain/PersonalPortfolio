@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { ArrowRightCircle } from "react-bootstrap-icons";
 // import header from "../assets/img/header-img.svg";
 import axios from 'axios';
 

@@ -31,7 +31,9 @@ export const NavBar = () => {
         <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
             <Container>
                 <Navbar.Brand href="#home">
+                    <a href="https://github.com/Outlain">
                     <img className='logo-resize' src={logo} alt="logo"></img>
+                    </a>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className='navbar-toggle-icon'></span>
@@ -43,7 +45,7 @@ export const NavBar = () => {
                         <Nav.Link href="#projects" className={ativeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
                         <span className='navbar-text'>
                             <div className='social-icon'>
-                                <a href='#skills'><img src={navIcon1} alt=""></img></a>
+                                <a href='https://github.com/Outlain'><img src={navIcon1} alt=""></img></a>
                             </div>
                             <a href='#connect'>
                                 <button className="vvd">
@@ -55,6 +57,6 @@ export const NavBar = () => {
                     </Nav>
                 </Navbar.Collapse>
             </Container>
-        </Navbar >
+        </Navbar>
     )
 }
