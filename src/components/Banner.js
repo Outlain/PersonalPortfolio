@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, div, Col } from "react-bootstrap";
 // import header from "../assets/img/header-img.svg";
 import axios from 'axios';
 
@@ -61,23 +61,27 @@ export const Banner = () => {
 
     return (
         <section className="banner" id='home'>
-            <Container>
-                <Row className="align-items-center">
-                    <Col xs={12} md={6} xl={7}>
-                        <span className="tagline">Welcome to my Portfolio</span>
-                        <h1>{`Hello, I'm Carlos Amado Roller `} <br /><br /><span className="wrap">{text}</span></h1>
-                        <p>I'm a full Stack web Developer passionate about creating the projects of the future</p>
-                    </Col>
-                    <Col className="what" xs={12} md={6} xl={5}>
-                        <h5 className="creation1">{quotes ? quotes[0] : ''} <br /> </h5>
-                        <br />
-                        <br />
-                        <br />
-                        <h5 className="creation">{quotes ? quotes[1] : ''} <br />  </h5>
-
-                    </Col>
-                </Row>
-            </Container>
+            <div className="dimmer">
+                <div className="banner-top"></div>
+                <div className="banner-left-top">
+                    <span className="tagline">Welcome to my Portfolio</span>
+                    <h1>Hello, I'm Carlos <br /> Amado Roller</h1>
+                </div>
+                <div className="banner-left-middle">
+                    <h1 className="wrap">{text}</h1>
+                </div>
+                <div className="banner-left-bottom">
+                    <h4>I'm a full Stack web Developer passionate about creating the projects of the future</h4>
+                </div>
+                <div className="banner-right">
+                    <h6 className="banner-right-top creation1">{quotes ? quotes[0] : ''}  </h6>
+                    <h6 className="banner-right-right creation">{quotes ? quotes[1] : ''}  </h6>
+                    <h6 className="banner-right-left-top-left creation">{quotes ? quotes[1] : ''}  </h6>
+                    <h6 className="banner-right-left-top-right creation">{quotes ? quotes[1] : ''}  </h6>
+                    <h6 className="banner-right-left-bottom-top creation1">{quotes ? quotes[1] : ''}  </h6>
+                    <h6 className="banner-right-left-bottom-bottom creation1">{quotes ? quotes[1] : ''}  </h6>
+                </div>
+            </div>
         </section>
     )
 
