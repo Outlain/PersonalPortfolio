@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import { Container, div, Col } from "react-bootstrap";
-// import header from "../assets/img/header-img.svg";
 import axios from 'axios';
 
 export const Banner = () => {
@@ -76,10 +74,10 @@ export const Banner = () => {
                 <div className="banner-right">
                     <h6 className="banner-right-top creation1">{quotes ? quotes[0] : ''}  </h6>
                     <h6 className="banner-right-right creation">{quotes ? quotes[1] : ''}  </h6>
-                    <h6 className="banner-right-left-top-left creation">{quotes ? quotes[1] : ''}  </h6>
-                    <h6 className="banner-right-left-top-right creation">{quotes ? quotes[1] : ''}  </h6>
-                    <h6 className="banner-right-left-bottom-top creation1">{quotes ? quotes[1] : ''}  </h6>
-                    <h6 className="banner-right-left-bottom-bottom creation1">{quotes ? quotes[1] : ''}  </h6>
+                    <h6 className="banner-right-left-top-left creation">{quotes ? quotes[2] : ''}  </h6>
+                    <h6 className="banner-right-left-top-right creation">{quotes ? quotes[3] : ''}  </h6>
+                    <h6 className="banner-right-left-bottom-top creation1">{quotes ? quotes[4] : ''}  </h6>
+                    <h6 className="banner-right-left-bottom-bottom creation1">{quotes ? quotes[5] : ''}  </h6>
                 </div>
             </div>
         </section>
