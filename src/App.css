@@ -234,6 +234,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .logo-resize {
   height: 8rem;
   width: 8rem;
+  border-radius: 99px;
 }
 #basic-navbar-nav {
   flex-grow: 0;
@@ -260,7 +261,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   top: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.7)
+  );
   /* background-color: red; */
 }
 .banner .tagline {
@@ -363,58 +369,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: 100;
   height: 35vh;
 }
-/* Skills */
 
-.skill {
-  padding: 0 0 50px 0;
-  position: relative;
-}
-.skill-bx {
-  background: #151515;
-  border-radius: 64px;
-  text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
-}
-.skill h2 {
-  font-size: 45px;
-  font-weight: 700;
-}
-.skill p {
-  color: #b8b8b8;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  margin: 14px 0 75px 0;
-}
-.skill-slider {
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-}
-.skill-slider .item img {
-  width: 50%;
-  margin: 0 auto 15px auto;
-}
-.background-image-left {
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
-}
-/* PROJECTS */
+/* PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS*/
 #projects {
   width: 100vw;
   height: 100vh;
   background-color: black;
-  background-image: url('./assets/img/cryptocurrencybackgroundtwo.gif');
+  background-image: url("./assets/img/cryptocurrencybackgroundtwo.gif");
   background-size: cover;
 }
 .dimmer2 {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(0, 0, 0, 0.5);
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.7)
+  );
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -477,7 +449,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* background-color: green; */
 }
 .project-inner-inner {
-  height: 100%;
+  height: 90%;
   width: 100%;
   /* background-color: green; */
   border: 0.2rem solid white;
@@ -488,21 +460,194 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
   justify-content: center;
 }
-.project-inner-inner h2{
+.project-inner-inner:hover {
+  border: 0.2rem solid #184047;
+  transform: scale(1.05);
+
+}
+.project-inner-inner h2 {
   text-shadow: 5px 5px 0 #000;
   color: white;
   text-decoration: none;
 }
-.project-inner-inner h5{
+.project-inner-inner h5 {
   text-shadow: 5px 5px 0 #000;
   color: white;
   text-decoration: none;
 }
 .project-inner a {
   text-decoration: none;
-
 }
-
+/*  SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION  */
+#skills {
+  height: 100vh;
+  width: 100vw;
+  /* background-color: red; */
+}
+.dimmer-skills {
+  height: 100%;
+  width: 100%;
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.8)
+  );
+  display: grid;
+  /* gap: 1rem; */
+  grid-template-columns: 3.5fr 1fr;
+  grid-template-rows: 2fr 2fr 9fr;
+}
+.skills-left-top {
+  /* background-color: red; */
+}
+.skills-left-middle {
+  /* background-color: blue; */
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 25%;
+}
+.skills-left-bottom {
+  /* background-color: green; */
+  grid-column: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skills-right {
+  /* background-color: blueviolet; */
+  grid-column: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  margin: 10px;
+}
+.skills-resume {
+  height: 70%;
+  width: 80%;
+  border: 0.05rem solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skills-spinning {
+  height: 100%;
+  width: 70%;
+  /* background-color: BLUE; */
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.skills-spinning-wheel {
+  height: 80%;
+  width: 80%;
+  border: 0.05rem solid white;
+  /* background-color: green; */
+}
+.skills-paragraph-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80%;
+  width: 30%;
+  border: 0.05rem solid white;
+}
+.skills-paragraph-inner {
+  /* background-color: gray; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+}
+/* CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  */
 #connect {
   background-color: #000;
+  height: 50vh;
+  width: 100vw;
+  /* background-color: green; */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 1rem;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.8)
+  );
+}
+.connect-left {
+  margin-top: 10%;
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.connect-left img {
+  height: 80%;
+  width: 80%;
+}
+.connect-right {
+  margin-top: 10%;
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.connect-right form {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  height: 60%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 2fr 1fr;
+  gap: 0.1rem;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
+  border: 0.2rem solid white;
+}
+.connect-right-message {
+  grid-column: 1 / span 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.connect-right button {
+  grid-column: 1 / span 2;
+}
+
+#connect span {
+  height: 100%;
+  width: 100%;
+}
+#connect span input {
+  height: 100%;
+  width: 100%;
+}
+#connect textarea {
+  height: 100%;
+  width: 100%;
+}
+#connect button {
+  height: 100%;
+  width: 100%;
+}
+#connect button:hover {
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
 }

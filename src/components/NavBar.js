@@ -2,9 +2,6 @@ import { useEffect, useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import logo from "../assets/img/logo.png"
 import navIcon1 from "../assets/img/nav-icon1.svg"
-// import navIcon2 from "../assets/img/nav-icon2.svg"
-// import navIcon3 from "../assets/img/nav-icon3.svg"
-
 
 export const NavBar = () => {
 
@@ -48,13 +45,16 @@ export const NavBar = () => {
                             <div className='social-icon'>
                                 <a href='#skills'><img src={navIcon1} alt=""></img></a>
                             </div>
-                            <button className="vvd">
-                                <span>Let's Connect</span>
-                            </button>
+                            <a href='#connect'>
+                                <button className="vvd">
+                                    <span>Let's Connect</span>
+                                </button>
+                            </a>
+
                         </span>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
-        </Navbar>
+        </Navbar >
     )
 }
