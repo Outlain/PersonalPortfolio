@@ -1,8 +1,25 @@
 import stars from "../assets/img/stars.gif"
-
-
+import javaScript from "../assets/img/skills-javascript.png"
+import flask from '../assets/img/skills-flask.png'
+import pythonImg from '../assets/img/skills-python.png'
+import githubImg from '../assets/img/skills-github.png'
+import vsCodeImg from '../assets/img/skills-vscode.png'
+import postMan from '../assets/img/skills-postman.png'
+import sqlImg from '../assets/img/skills-sql.png'
+import reactImg from '../assets/img/skills-react.png'
+import nodemonImg from "../assets/img/skills-nodemon.png"
 export const Skills = () => {
-
+    const skillsIcons = [
+        { url: javaScript },
+        { url: flask },
+        { url: pythonImg },
+        { url: githubImg },
+        { url: vsCodeImg },
+        { url: postMan },
+        { url: sqlImg },
+        { url: reactImg },
+        { url: nodemonImg },
+    ]
     return (
         <section
             style={{ backgroundImage: `url(${stars})`, backgroundSize: 'cover' }}
@@ -15,7 +32,17 @@ export const Skills = () => {
                 </div>
                 <div className="skills-left-bottom">
                     <div className="skills-spinning">
-                        <div className="skills-spinning-wheel"></div>
+                        <div className="skills-spinning-wheel">
+                            <div className="skills-spinning-wheel-inner">
+                                {
+                                    skillsIcons.map((x, index) => {
+                                        return <div className="skills-spinning-inner-inner">
+                                            <img key={index} src={x.url}></img>
+                                        </div>
+                                    })
+                                }
+                            </div>
+                        </div>
                     </div>
                     <div className="skills-paragraph-main">
                         <div className="not-all-clicked skills-paragraph-inner">
