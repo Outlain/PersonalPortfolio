@@ -26,10 +26,9 @@ export const Banner = () => {
             console.error(error);
         });
         console.log('once')
-        if (quotes) { console.log(quotes[0].text) }
+        if (quotes) { console.log(quotes) }
 
     }, [])
-
     useEffect(() => {
         let ticker = setInterval(() => {
             tick();
@@ -70,11 +69,11 @@ export const Banner = () => {
                         <p>I'm a full Stack web Developer passionate about creating the projects of the future</p>
                     </Col>
                     <Col className="what" xs={12} md={6} xl={5}>
-                        <h5 className="creation1">{quotes ? quotes[0].author : ''} <br /> <p>{quotes ? quotes[0].text : ''}</p> </h5>
+                        <h5 className="creation1">{quotes ? quotes[0] : ''} <br /> </h5>
                         <br />
                         <br />
                         <br />
-                        <h5 className="creation">{quotes ? quotes[1].author : ''} <br /> <p>{quotes ? quotes[1].text : ''}</p> </h5>
+                        <h5 className="creation">{quotes ? quotes[1] : ''} <br />  </h5>
 
                     </Col>
                 </Row>

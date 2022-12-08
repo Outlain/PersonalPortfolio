@@ -44,48 +44,48 @@ export const Projects = () => {
     const handleOnclickGames = () => {
         setAllClicked('project-two')
         if (projectType.length > 0) {
-            if (projectType[0].title == games[0].title) {
+            if (projectType[0].title === games[0].title) {
                 console.log(projectType[0].title)
                 setProjectType(empty)
             }
-            if (projectType[0].title != games[0].title) {
+            if (projectType[0].title !== games[0].title) {
                 console.log(projectType[0].title)
                 setProjectType(games)
             }
         }
-        if (projectType.length == 0) {
+        if (projectType.length === 0) {
             setProjectType(games)
         }
     }
     const handleOnclickFullStack = () => {
         setAllClicked('project-two')
         if (projectType.length > 0) {
-            if (projectType[0].title == fullStack[0].title) {
+            if (projectType[0].title === fullStack[0].title) {
                 console.log(projectType[0].title)
                 setProjectType(empty)
             }
-            if (projectType[0].title != fullStack[0].title) {
+            if (projectType[0].title !== fullStack[0].title) {
                 console.log(projectType[0].title)
                 setProjectType(fullStack)
             }
         }
-        if (projectType.length == 0) {
+        if (projectType.length === 0) {
             setProjectType(fullStack)
         }
     }
     const handleOnclickMisc = () => {
         setAllClicked('project-two')
         if (projectType.length > 0) {
-            if (projectType[0].title == misc[0].title) {
+            if (projectType[0].title === misc[0].title) {
                 console.log(projectType[0].title)
                 setProjectType(empty)
             }
-            if (projectType[0].title != misc[0].title) {
+            if (projectType[0].title !== misc[0].title) {
                 console.log(projectType[0].title)
                 setProjectType(misc)
             }
         }
-        if (projectType.length == 0) {
+        if (projectType.length === 0) {
             setProjectType(misc)
         }
     }
