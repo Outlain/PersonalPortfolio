@@ -577,6 +577,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 @media screen and (max-width: 600px) {
+  .project-one p {
+    width:90%;
+    overflow: auto;
+  }
 }
 /*  SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION  */
 #skills {
