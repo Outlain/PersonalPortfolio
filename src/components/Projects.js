@@ -27,8 +27,8 @@ export const Projects = () => {
     ]
     const misc = [
         {
-            title: "",
-            description: '',
+            title: "Instagram Clone",
+            description: 'Simple HTML CSS of Instagrams webpage',
             imgUrl: '',
             link: ''
         },
@@ -39,8 +39,10 @@ export const Projects = () => {
     ]
 
     const [projectType, setProjectType] = useState(empty)
+    const [allClicked, setAllClicked] = useState('not-all-clicked project-two')
 
     const handleOnclickGames = () => {
+        setAllClicked('project-two')
         if (projectType.length > 0) {
             if (projectType[0].title == games[0].title) {
                 console.log(projectType[0].title)
@@ -56,6 +58,7 @@ export const Projects = () => {
         }
     }
     const handleOnclickFullStack = () => {
+        setAllClicked('project-two')
         if (projectType.length > 0) {
             if (projectType[0].title == fullStack[0].title) {
                 console.log(projectType[0].title)
@@ -71,6 +74,7 @@ export const Projects = () => {
         }
     }
     const handleOnclickMisc = () => {
+        setAllClicked('project-two')
         if (projectType.length > 0) {
             if (projectType[0].title == misc[0].title) {
                 console.log(projectType[0].title)
@@ -93,7 +97,7 @@ export const Projects = () => {
                     <h1>Projects</h1>
                     <p>These are the projects I have worked on ranging from hours to days to weeks to complete! <br /> They are organized into three actagories, Mini-games (usually through CANVAS or PyGame), Full-Stack websites that range from API to full CRUD, and MISC for all others!</p>
                 </section>
-                <section className="project-two">
+                <section className={allClicked}>
                     <button onClick={handleOnclickGames} className="left">Games</button>
                     <button onClick={handleOnclickFullStack} className="center">Full-Stack</button>
                     <button onClick={handleOnclickMisc} className="right">Misc</button>

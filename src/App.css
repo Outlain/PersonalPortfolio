@@ -480,6 +480,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project-inner a {
   text-decoration: none;
 }
+.not-all-clicked {
+  animation: notClicked 2s linear infinite;
+}
+@keyframes notClicked {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    /* transform: translateY(-50px); */
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /*  SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION  */
 #skills {
   height: 100vh;
@@ -567,7 +582,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 60%;
+  width: 50%;
+}
+.skills-resume button {
+  background-color: rgba(0,0,0,0);
+  color: white;
+  border: none;
+  font-size: larger;
 }
 /* CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  */
 #connect {

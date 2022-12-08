@@ -18,15 +18,15 @@ export const Skills = () => {
                         <div className="skills-spinning-wheel"></div>
                     </div>
                     <div className="skills-paragraph-main">
-                        <div className="skills-paragraph-inner">
+                        <div className="not-all-clicked skills-paragraph-inner">
                             <h4>Languages</h4>
                             <p>HTML5, CSS, Javascript, JSX, Python, MongoDB, SQL </p>
                         </div>
-                        <div className="skills-paragraph-inner">
+                        <div className="not-all-clicked skills-paragraph-inner">
                             <h4>Libraries/Frameworks</h4>
                             <p>Node, Express, React, Flask, JQuery </p>
                         </div>
-                        <div className="skills-paragraph-inner">
+                        <div className="not-all-clicked skills-paragraph-inner">
                             <h4>Tools/Misc</h4>
                             <p>VsCode, Postman, Figma, Git, GitHub, Postgres, Npm </p>
                         </div>
@@ -34,7 +34,7 @@ export const Skills = () => {
                 </div>
                 <div className="skills-right">
                     <div className="skills-resume">
-                        <h4>View Resume</h4>
+                        <button>View Resume</button>
                     </div>
 
                 </div>
