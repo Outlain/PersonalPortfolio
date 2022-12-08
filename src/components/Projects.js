@@ -1,6 +1,7 @@
 // import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
 import projectImg1 from "../assets/img/Crypto-Website.png"
 import projectImgGameOne from "../assets/img/fightingGame.png"
+import instagramCss from "../assets/img/instagramCss.png"
 import { useState } from "react"
 import { ProjectCard } from "../components/ProjectCard"
 
@@ -29,8 +30,8 @@ export const Projects = () => {
         {
             title: "Instagram Clone",
             description: 'Simple HTML CSS of Instagrams webpage',
-            imgUrl: '',
-            link: ''
+            imgUrl: instagramCss,
+            link: 'https://leafy-trifle-02c195.netlify.app/'
         },
     ]
 
