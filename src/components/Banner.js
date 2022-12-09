@@ -23,7 +23,7 @@ export const Banner = () => {
         }).catch(function (error) {
             console.error(error);
         });
-        if (quotes) { console.log(quotes) }
+        // if (quotes) { console.log(quotes) }
 
     }, []);
 
@@ -64,6 +64,7 @@ export const Banner = () => {
         }, delta)
 
         return () => { clearInterval(ticker) };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [text])
 
     return (
