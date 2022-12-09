@@ -21,7 +21,7 @@ export const NavBar = () => {
             return () => window.addEventListener("scroll", onScroll)
         }
 
-    })
+    },[])
 
     const onUpdateActiveLink = (v) => {
         setActivelink(v);

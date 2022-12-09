@@ -23,13 +23,11 @@ export const Banner = () => {
         }).catch(function (error) {
             console.error(error);
         });
-        console.log('once')
         if (quotes) { console.log(quotes) }
 
-    },[]);
+    }, []);
 
     useEffect(() => {
-        console.log(quotes)
         if (quotes) {
             quotes.sort((a, b) => {
                 if (a.length < b.length) return 1;
@@ -37,17 +35,8 @@ export const Banner = () => {
                 return 0;
             });
         }
-        console.log(quotes)
     }, [quotes]);
     // if (quotes) { console.log(quotes)}
-    useEffect(() => {
-        let ticker = setInterval(() => {
-            tick();
-        }, delta)
-
-        return () => { clearInterval(ticker) };
-    }, [text])
-
 
     const tick = () => {
         let i = loopNum % toRotate.length;
@@ -69,6 +58,13 @@ export const Banner = () => {
             setDelta(300);
         }
     }
+    useEffect(() => {
+        let ticker = setInterval(() => {
+            tick();
+        }, delta)
+
+        return () => { clearInterval(ticker) };
+    }, [text])
 
     return (
         <section className="banner" id='home'>
