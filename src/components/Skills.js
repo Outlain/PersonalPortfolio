@@ -10,6 +10,10 @@ import postMan from '../assets/img/skills-postman.png'
 import sqlImg from '../assets/img/skills-sql.png'
 import reactImg from '../assets/img/skills-react.png'
 import nodemonImg from "../assets/img/skills-nodemon.png"
+import figmaImg from '../assets/img/skills-figma.png'
+import gitImg from '../assets/img/skills-git.png'
+import cssImg from '../assets/img/skils-css.png'
+import htmlImg from '../assets/img/skills-html.png'
 export const Skills = () => {
     const skillsIcons = [
         { url: javaScript },
@@ -21,6 +25,11 @@ export const Skills = () => {
         { url: sqlImg },
         { url: reactImg },
         { url: nodemonImg },
+        { url: figmaImg},
+        { url: gitImg},
+        { url: cssImg},
+        { url: htmlImg},
+
     ];
     const [breaking, setBreaking] = useState('')
 
