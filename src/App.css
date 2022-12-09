@@ -923,7 +923,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 850px) {
   #connect {
     grid-template-columns: 1fr;
     height: auto;
