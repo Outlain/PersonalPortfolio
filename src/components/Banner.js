@@ -26,7 +26,7 @@ export const Banner = () => {
         console.log('once')
         if (quotes) { console.log(quotes) }
 
-    }, []);
+    },[]);
 
     useEffect(() => {
         console.log(quotes)

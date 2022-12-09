@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react"
+
 import stars from "../assets/img/stars.gif"
 import javaScript from "../assets/img/skills-javascript.png"
 import flask from '../assets/img/skills-flask.png'
@@ -19,7 +21,25 @@ export const Skills = () => {
         { url: sqlImg },
         { url: reactImg },
         { url: nodemonImg },
-    ]
+    ];
+    const [breaking, setBreaking] = useState('')
+
+    const handleResize = () => {
+        if (window.innerWidth < 600) {
+            setBreaking(<br />)
+            // console.log("screen less than 600px")
+
+        } else {
+            setBreaking('')
+            // console.log('screen larger than 600px')
+        }
+    }
+    useEffect(() => {
+        window.addEventListener("resize", handleResize)
+        // console.log('Starting Resize Listener')
+    }, [])
+
+
     return (
         <section
             style={{ backgroundImage: `url(${stars})`, backgroundSize: 'cover' }}
@@ -36,8 +56,8 @@ export const Skills = () => {
                             <div className="skills-spinning-wheel-inner">
                                 {
                                     skillsIcons.map((x, index) => {
-                                        return <div className="skills-spinning-inner-inner">
-                                            <img key={index} src={x.url}></img>
+                                        return <div key={index} className="skills-spinning-inner-inner">
+                                            <img key={index} src={x.url} alt="img"></img>
                                         </div>
                                     })
                                 }
@@ -50,7 +70,7 @@ export const Skills = () => {
                             <p>HTML5, CSS, Javascript, JSX, Python, MongoDB, SQL </p>
                         </div>
                         <div className="not-all-clicked skills-paragraph-inner">
-                            <h4>Libraries/Frameworks</h4>
+                            <h4>Libraries/{breaking}Frameworks</h4>
                             <p>Node, Express, React, Flask, JQuery </p>
                         </div>
                         <div className="not-all-clicked skills-paragraph-inner">

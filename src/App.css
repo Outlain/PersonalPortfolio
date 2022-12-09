@@ -607,9 +607,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   grid-template-columns: 3.5fr 1fr;
   grid-template-rows: 2fr 2fr 9fr;
 }
-.skills-left-top {
-  /* background-color: red; */
-}
+
 .skills-left-middle {
   /* background-color: blue; */
   grid-column: 1;
@@ -756,6 +754,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
   width: 50%;
 }
+.skills-paragraph-inner h4 {
+  font-size: 1.4rem;
+}
 .skills-resume button {
   background-color: rgba(0, 0, 0, 0);
   color: white;
@@ -805,6 +806,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .skills-paragraph-inner {
     width: 90%;
     font-size: 0.8rem;
+    overflow: hidden;
   }
   .skills-paragraph-inner h4 {
     font-size: 1rem;
