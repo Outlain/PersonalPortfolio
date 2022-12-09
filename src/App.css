@@ -769,7 +769,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border: none;
   font-size: larger;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 980px) {
   .dimmer-skills {
     display: grid;
     grid-template-areas:
