@@ -542,16 +542,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 2% 1%;
   height: 100%;
   width: 100%;
-  /* background-size: cover; */
-  /* background-color: green; */
 }
 .project-inner-inner {
   height: 90%;
-  width: 100%;
+  width: auto;
   /* background-color: green; */
   border: 0.2rem solid white;
   border-radius: 20px;
-  background-position: left;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.project-inner-inner-blur {
+  backdrop-filter: blur(2.5px);
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -562,17 +568,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transform: scale(1.05);
 }
 .project-inner-inner h2 {
-  text-shadow: 5px 5px 0 #000;
+  text-shadow: -1.3px 1.3px 0 #000, 1.3px 1.3px 0 #000, 1.3px -1.3px 0 #000,
+    -1.3px -1.3px 0 #000;
   color: white;
   text-decoration: none;
 }
 .project-inner-inner h5 {
-  text-shadow: 5px 5px 0 #000;
+  text-shadow: -1.3px 1.3px 0 #000, 1.3px 1.3px 0 #000, 1.3px -1.3px 0 #000,
+    -1.3px -1.3px 0 #000;
   color: white;
   text-decoration: none;
 }
 .project-inner a {
   text-decoration: none;
+  background-color: rgba(174, 152, 152, 0);
 }
 .not-all-clicked {
   animation: notClicked 2s linear infinite;
