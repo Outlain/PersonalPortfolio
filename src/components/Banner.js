@@ -68,6 +68,7 @@ export const Banner = () => {
     }, [text])
 
     return (
+
         <section className="banner" id='home'>
             <div className="dimmer">
                 <div className="banner-top"></div>

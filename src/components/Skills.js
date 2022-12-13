@@ -14,6 +14,7 @@ import figmaImg from '../assets/img/skills-figma.png'
 import gitImg from '../assets/img/skills-git.png'
 import cssImg from '../assets/img/skils-css.png'
 import htmlImg from '../assets/img/skills-html.png'
+import ironHackImg from '../assets/img/skills-ironhack.png'
 export const Skills = () => {
     const skillsIcons = [
         { url: javaScript },
@@ -25,10 +26,10 @@ export const Skills = () => {
         { url: sqlImg },
         { url: reactImg },
         { url: nodemonImg },
-        { url: figmaImg},
-        { url: gitImg},
-        { url: cssImg},
-        { url: htmlImg},
+        { url: figmaImg },
+        { url: gitImg },
+        { url: cssImg },
+        { url: htmlImg },
 
     ];
     const [breaking, setBreaking] = useState('')
@@ -93,7 +94,11 @@ export const Skills = () => {
                 </div>
                 <div className="skills-right">
                     <div className="skills-resume">
-                        <button>View Resume</button>
+                        <button>
+                            <a href="https://www.credential.net/f9640acf-dbf8-4d2b-8441-8a026569cbbf">
+                                <img className="not-all-clicked ironHack" src={ironHackImg} alt="IronHack Logo"></img>
+                            </a>
+                        </button>
                     </div>
 
                 </div>
