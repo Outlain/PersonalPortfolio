@@ -43,7 +43,7 @@ export const Projects = () => {
     const [allClicked, setAllClicked] = useState('not-all-clicked project-two')
 
     const handleOnclickGames = () => {
-        setAllClicked('project-two')
+        setAllClicked('project-clicked project-two')
         if (projectType.length > 0) {
             if (projectType[0].title === games[0].title) {
                 console.log(projectType[0].title)
@@ -59,7 +59,7 @@ export const Projects = () => {
         }
     }
     const handleOnclickFullStack = () => {
-        setAllClicked('project-two')
+        setAllClicked('project-clicked project-two')
         if (projectType.length > 0) {
             if (projectType[0].title === fullStack[0].title) {
                 console.log(projectType[0].title)
@@ -75,7 +75,7 @@ export const Projects = () => {
         }
     }
     const handleOnclickMisc = () => {
-        setAllClicked('project-two')
+        setAllClicked('project-clicked project-two')
         if (projectType.length > 0) {
             if (projectType[0].title === misc[0].title) {
                 console.log(projectType[0].title)
