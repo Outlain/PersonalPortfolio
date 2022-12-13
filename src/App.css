@@ -564,8 +564,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   justify-content: center;
 }
 .project-inner-inner:hover {
-  border: 0.2rem solid #184047;
+  border: none;
   transform: scale(1.05);
+}
+.project-inner-inner-blur:hover {
+  backdrop-filter: blur(0px);
 }
 .project-inner-inner h2 {
   text-shadow: -1.3px 1.3px 0 #000, 1.3px 1.3px 0 #000, 1.3px -1.3px 0 #000,
