@@ -15,12 +15,12 @@ import gitImg from '../assets/img/skills-git.png'
 import cssImg from '../assets/img/skils-css.png'
 import htmlImg from '../assets/img/skills-html.png'
 import ironHackImg from '../assets/img/skills-ironhack.png'
+import codeWarsImg from '../assets/img/skills-codewars.png'
 export const Skills = () => {
     const skillsIcons = [
         { url: javaScript },
         { url: flask },
         { url: pythonImg },
-        { url: githubImg },
         { url: vsCodeImg },
         { url: postMan },
         { url: sqlImg },
@@ -78,15 +78,15 @@ export const Skills = () => {
                         </div>
                     </div>
                     <div className="skills-paragraph-main">
-                        <div className="not-all-clicked skills-paragraph-inner">
+                        <div className="skills-paragraph-inner">
                             <h4>Languages</h4>
                             <p>HTML5, CSS, Javascript, JSX, Python, MongoDB, SQL </p>
                         </div>
-                        <div className="not-all-clicked skills-paragraph-inner">
+                        <div className="skills-paragraph-inner">
                             <h4>Libraries/{breaking}Frameworks</h4>
                             <p>Node, Express, React, Flask, JQuery </p>
                         </div>
-                        <div className="not-all-clicked skills-paragraph-inner">
+                        <div className="skills-paragraph-inner">
                             <h4>Tools/Misc</h4>
                             <p>VsCode, Postman, Figma, Git, GitHub, Postgres, Npm </p>
                         </div>
@@ -97,6 +97,12 @@ export const Skills = () => {
                         <button>
                             <a href="https://www.credential.net/f9640acf-dbf8-4d2b-8441-8a026569cbbf">
                                 <img className="not-all-clicked ironHack" src={ironHackImg} alt="IronHack Logo"></img>
+                            </a>
+                            <a href="https://www.codewars.com/users/Outlain">
+                                <img className="not-all-clicked ironHack" src={codeWarsImg} alt="Codewars Logo"></img>
+                            </a>
+                            <a href="https://github.com/Outlain">
+                                <img className="not-all-clicked ironHack" src={githubImg} alt="GitHub Logo"></img>
                             </a>
                         </button>
                     </div>

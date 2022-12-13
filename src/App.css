@@ -583,7 +583,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
   50% {
     /* transform: translateY(-50px); */
-    transform: scale(1.05);
+    transform: scale(1.07);
   }
   100% {
     transform: scale(1);
@@ -729,7 +729,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   grid-area: 4/3;
 }
 .skills-spinning-inner-inner:nth-child(5) {
-  grid-area: 4/4;
+  grid-area: 1/2;
 }
 .skills-spinning-inner-inner:nth-child(6) {
   grid-area: 4/2;
@@ -751,9 +751,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .skills-spinning-inner-inner:nth-child(12) {
   grid-area: 3/1;
-}
-.skills-spinning-inner-inner:nth-child(13) {
-  grid-area: 1/2;
 }
 .skills-paragraph-main {
   display: flex;
@@ -788,8 +785,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: white;
   border: none;
   font-size: larger;
-  height: 50%;
+  height: 70%;
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.skills-resume a {
+  height: 100%;
+  width: 100%;
 }
 .ironHack {
   height: auto;
@@ -841,10 +846,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     border: 0.05rem solid white;
   }
   .skills-resume button {
-    height: 50%;
+    /* background-color: red; */
+    height: 60%;
     width: 50%;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: row;
   }
   .skills-resume img {
     height: 100%;
