@@ -38,27 +38,28 @@ export const Banner = () => {
     }, [quotes]);
     // if (quotes) { console.log(quotes)}
 
-    const tick = () => {
-        let i = loopNum % toRotate.length;
-        let fullText = toRotate[i];
-        let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1)
 
-        setText(updatedText);
-
-        if (isDeleting) {
-            setDelta(prevDelta => prevDelta / 1.3)
-        }
-
-        if (!isDeleting && updatedText === fullText) {
-            setIsDeleting(true);
-            setDelta(period);
-        } else if (isDeleting && updatedText === '') {
-            setIsDeleting(false);
-            setLoopNum(loopNum + 1);
-            setDelta(300);
-        }
-    }
     useEffect(() => {
+        const tick = () => {
+            let i = loopNum % toRotate.length;
+            let fullText = toRotate[i];
+            let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1)
+
+            setText(updatedText);
+
+            if (isDeleting) {
+                setDelta(prevDelta => prevDelta / 1.3)
+            }
+
+            if (!isDeleting && updatedText === fullText) {
+                setIsDeleting(true);
+                setDelta(period);
+            } else if (isDeleting && updatedText === '') {
+                setIsDeleting(false);
+                setLoopNum(loopNum + 1);
+                setDelta(300);
+            }
+        }
         let ticker = setInterval(() => {
             tick();
         }, delta)

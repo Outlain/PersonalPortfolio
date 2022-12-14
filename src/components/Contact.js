@@ -55,7 +55,7 @@ export const Contact = () => {
                         <input
                             type="text"
                             value={formDetails.firstName}
-                            PlaceHolder="First Name"
+                            placeholder="First Name"
                             onChange={(e) => onFormUpdate('firstName', e.target.value)}
                         />
                     </span>
@@ -63,7 +63,7 @@ export const Contact = () => {
                         <input
                             type="text"
                             value={formDetails.lastName}
-                            PlaceHolder="Last Name"
+                            placeholder="Last Name"
                             onChange={(e) => onFormUpdate('lastName', e.target.value)}
                         />
                     </span>
@@ -71,7 +71,7 @@ export const Contact = () => {
                         <input
                             type="email"
                             value={formDetails.email}
-                            PlaceHolder="Email"
+                            placeholder="Email"
                             onChange={(e) => onFormUpdate('email', e.target.value)}
                         />
                     </span>
@@ -79,7 +79,7 @@ export const Contact = () => {
                         <input
                             type="text"
                             value={formDetails.phone}
-                            PlaceHolder="Company Name (optional)"
+                            placeholder="Company Name (optional)"
                             onChange={(e) => onFormUpdate('phone', e.target.value)}
                         />
                     </span>

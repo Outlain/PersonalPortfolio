@@ -34,17 +34,16 @@ export const Skills = () => {
     ];
     const [breaking, setBreaking] = useState('')
 
-    const handleResize = () => {
-        if (window.innerWidth < 980) {
-            setBreaking(<br />)
-            // console.log("screen less than 600px")
 
-        } else {
-            setBreaking('')
-            // console.log('screen larger than 600px')
-        }
-    }
     useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 980) {
+                setBreaking(<br />)
+
+            } else {
+                setBreaking('')
+            }
+        }
         window.addEventListener("resize", handleResize)
         // console.log('Starting Resize Listener')
         if (window.innerWidth < 980) {
