@@ -13,7 +13,7 @@ export const Banner = () => {
     useEffect(() => {
         const options = {
             method: 'GET',
-            url: 'https://crypto-app-nyj5.onrender.com/quotes',
+            url: process.env.REACT_APP_BANNER_URL,
         };
 
         axios.request(options).then(function (response) {

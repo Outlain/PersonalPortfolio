@@ -26,7 +26,7 @@ export const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setButtonText("Sending...");
-        let response = await fetch("https://crypto-app-nyj5.onrender.com/contact", {
+        let response = await fetch(process.env.REACT_APP_CONTACT_URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
