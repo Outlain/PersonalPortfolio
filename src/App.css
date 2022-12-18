@@ -135,7 +135,7 @@ span.navbar-text {
   transition: 0.3s ease-in-out;
 }
 .social-icon a:hover::before {
-  transform: scale(1);
+  transform: scale(1.1);
 }
 .social-icon a img {
   width: 40%;
@@ -229,14 +229,34 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 8rem;
   width: auto;
   border-radius: 99px;
+  position: relative;
+  top: 8vh;
 }
 #basic-navbar-nav {
   flex-grow: 0;
   /* padding-right: 5rem; */
+  /* background-color: red; */
+  height: 100%;
 }
-@media screen and (max-width: 600px) {
+.me-auto {
+  height: 100%;
+}
+.navbar-nav {
+  align-items: baseline;
+}
+.navbar-link {
+  height: 1px !important;
+}
+.navbar {
+  height: 5vh;
+}
+.container {
+  height: 5vh;
+}
+@media screen and (max-width: 991px) {
   .logo-resize {
     height: 6rem;
+    top: 0vh;
   }
 }
 /************ Banner Css ************/
