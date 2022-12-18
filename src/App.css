@@ -279,8 +279,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   );
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-  grid-template-rows: repeat(4, minmax(0, 1fr));
-  grid-template-rows: minmax(0, 1.3fr) minmax(0, 3fr) 1fr minmax(0, 2fr);
+  /* grid-template-rows: repeat(4, minmax(0, 1fr)); */
+  grid-template-rows: minmax(0, 1.3fr) minmax(0, 3fr) 1fr minmax(0, 4fr);
 }
 .banner-top {
   grid-column: 1 / span 2;
@@ -321,9 +321,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  overflow: auto;
 }
-.banner-left-bottom h4 {
-  width: 60%;
+.banner-left-bottom h5 {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
 }
 .banner-right {
   grid-column: 2;
@@ -435,10 +440,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     transform: translateY(00px);
   }
 }
+@media screen and (max-width: 1100px) {
+  .dimmer {
+    grid-template-rows: minmax(0, 1.3fr) minmax(0, 3fr) 1fr minmax(0, 5fr);
+    /* background-color: red; */
+  }
+  .dimmer h5 {
+    font-size: 1.1rem;
+  }
+  .banner-left-bottom {
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 850px) {
   .dimmer {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: minmax(0, 0.5fr) 1fr 0.4fr 0.5fr minmax(0, 3fr);
+    grid-template-rows:
+      minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 0.2fr) minmax(0, 1.5fr)
+      minmax(0, 3fr);
   }
   .banner-top {
     grid-column: 1;
@@ -465,8 +484,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     grid-column: 1;
     grid-row: 4;
   }
-  .banner-left-bottom h4 {
-    width: 60%;
+  .banner-left-bottom h5 {
+    width: 80%;
   }
   .banner-right {
     grid-column: 1;
@@ -481,6 +500,79 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .banner-right h6 {
     margin: 0;
     padding: 1rem;
+  }
+  .dimmer h5 {
+    font-size: 1rem;
+  }
+  .dimmer h1 {
+    font-size: 1.4rem;
+  }
+  .dimmer h6 {
+    font-size: 0.75rem;
+  }
+  @keyframes rip {
+    0% {
+      transform: translateX(0px);
+    }
+    15% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(-15px);
+    }
+    75% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  @keyframes updown {
+    0% {
+      transform: translateY(0px);
+    }
+    15% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(15px);
+    }
+    75% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(00px);
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .dimmer {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows:
+      minmax(0, 0.1fr) minmax(0, 0.5fr) minmax(0, 0.18fr) minmax(0, 2fr)
+      minmax(0, 2.2fr);
+    background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0.8)
+    );
+  }
+  .banner-left-bottom h5 {
+    width: 90%;
+    font-size: 0.9rem;
+    /* height: 100%; */
+    /* border: 0.02rem solid rgba(255, 255, 255, 0.5); */
+  }
+  .tagline {
+    visibility: hidden;
+  }
+  .logo-resize {
+    height: 3.5rem;
+    top: 0vh;
+  }
+  .dimmer h1 {
+    font-size: 1.3rem;
   }
 }
 
@@ -880,7 +972,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .skills-resume button {
     /* background-color: red; */
     height: 60%;
-    width: 50%;
+    width: 65%;
     margin: 0;
     padding: 0;
     display: flex;
@@ -904,6 +996,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
   .skills-paragraph-inner h4 {
     font-size: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .skills-paragraph-inner h4 {
+    font-size: 0.8rem;
+  }
+  .skills-paragraph-inner p {
+    font-size: 0.6rem;
+  }
+  .skills-resume button {
+    /* background-color: red; */
+    height: 47%;
+    width: 80%;
   }
 }
 /* CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  */
@@ -1012,5 +1117,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .connect-right form {
     height: 90%;
     width: 90%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .project-one h1 {
+    font-size: 1.2rem;
+  }
+  .project-one p {
+    font-size: 0.85rem;
   }
 }

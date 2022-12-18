@@ -81,15 +81,15 @@ export const Banner = () => {
                     <h1 className="wrap">{text}</h1>
                 </div>
                 <div className="banner-left-bottom">
-                    <h4>I'm a full Stack web Developer passionate about creating the projects of the future</h4>
+                    <h5> A full-stack web developer with a strong foundation in programming languages and libraries/frameworks, such as avaScript, HTML, CSS, React, Node.js. In my previous and current roles at a Full-stack Web developer and software developer through work and school respectively, I have gained experience in building scalable and secure RESTful APIs, responsive and mobile-friendly highly interactive web applications. I am constantly seeking to expand my knowledge and skillset, and am adaptable to learning new technologies. I am excited to bring my skills and passion to your team and contribute to the development of innovative and engaging web applications.</h5>
                 </div>
                 <div className="banner-right">
-                    <h6 className="banner-right-top creation1">{quotes ? quotes[0] : ''} <br/> (Randomly API Generated Quote) </h6>
-                    <h6 className="banner-right-right creation">{quotes ? quotes[1] : ''} <br/> (Randomly API Generated Quote) </h6>
-                    <h6 className="banner-right-left-top-left creation">{quotes ? quotes[2] : ''}  <br/> (Randomly API Generated Quote)</h6>
-                    <h6 className="banner-right-left-top-right creation">{quotes ? quotes[3] : ''} <br/> (Randomly API Generated Quote) </h6>
-                    <h6 className="banner-right-left-bottom-top creation1">{quotes ? quotes[4] : ''} <br/> (Randomly API Generated Quote) </h6>
-                    <h6 className="banner-right-left-bottom-bottom creation1">{quotes ? quotes[5] : ''} <br/> (Randomly API Generated Quote) </h6>
+                    <h6 className="banner-right-top creation1">{quotes ? quotes[0] : ''} <br /> (Randomly API Generated Quote) </h6>
+                    <h6 className="banner-right-right creation">{quotes ? quotes[1] : ''} <br /> (Randomly API Generated Quote) </h6>
+                    <h6 className="banner-right-left-top-left creation">{quotes ? quotes[2] : ''}  <br /> (Randomly API Generated Quote)</h6>
+                    <h6 className="banner-right-left-top-right creation">{quotes ? quotes[3] : ''} <br /> (Randomly API Generated Quote) </h6>
+                    <h6 className="banner-right-left-bottom-top creation1">{quotes ? quotes[4] : ''} <br /> (Randomly API Generated Quote) </h6>
+                    <h6 className="banner-right-left-bottom-bottom creation1">{quotes ? quotes[5] : ''} <br /> (Randomly API Generated Quote) </h6>
                 </div>
             </div>
         </section>
