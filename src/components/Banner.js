@@ -84,12 +84,12 @@ export const Banner = () => {
                     <h4>I'm a full Stack web Developer passionate about creating the projects of the future</h4>
                 </div>
                 <div className="banner-right">
-                    <h6 className="banner-right-top creation1">{quotes ? quotes[0] : ''}  </h6>
-                    <h6 className="banner-right-right creation">{quotes ? quotes[1] : ''}  </h6>
-                    <h6 className="banner-right-left-top-left creation">{quotes ? quotes[2] : ''}  </h6>
-                    <h6 className="banner-right-left-top-right creation">{quotes ? quotes[3] : ''}  </h6>
-                    <h6 className="banner-right-left-bottom-top creation1">{quotes ? quotes[4] : ''}  </h6>
-                    <h6 className="banner-right-left-bottom-bottom creation1">{quotes ? quotes[5] : ''}  </h6>
+                    <h6 className="banner-right-top creation1">{quotes ? quotes[0] : ''} <br/> (Randomly API Generated Quote) </h6>
+                    <h6 className="banner-right-right creation">{quotes ? quotes[1] : ''} <br/> (Randomly API Generated Quote) </h6>
+                    <h6 className="banner-right-left-top-left creation">{quotes ? quotes[2] : ''}  <br/> (Randomly API Generated Quote)</h6>
+                    <h6 className="banner-right-left-top-right creation">{quotes ? quotes[3] : ''} <br/> (Randomly API Generated Quote) </h6>
+                    <h6 className="banner-right-left-bottom-top creation1">{quotes ? quotes[4] : ''} <br/> (Randomly API Generated Quote) </h6>
+                    <h6 className="banner-right-left-bottom-bottom creation1">{quotes ? quotes[5] : ''} <br/> (Randomly API Generated Quote) </h6>
                 </div>
             </div>
         </section>
