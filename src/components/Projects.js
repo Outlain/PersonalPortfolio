@@ -2,6 +2,7 @@
 import projectImg1 from "../assets/img/Crypto-Website.png"
 import projectImgGameOne from "../assets/img/fightingGame.png"
 import instagramCss from "../assets/img/instagramCss.png"
+import fitnessImg from "../assets/img/projectsFitnessWebsite.png"
 import { useState } from "react"
 import { ProjectCard } from "../components/ProjectCard"
 
@@ -25,6 +26,12 @@ export const Projects = () => {
             imgUrl: projectImg1,
             link: 'https://carlos-crypto-project.netlify.app/'
         },
+        {
+            title: "Crypto API - Currently in Beta - Still In Progress of being built",
+            description: 'Fitness Website that includes full crud functionality and tracks your lifts everyday',
+            imgUrl: fitnessImg,
+            link: 'https://fitness-project-carlos.netlify.app/'
+        }
     ]
     const misc = [
         {
