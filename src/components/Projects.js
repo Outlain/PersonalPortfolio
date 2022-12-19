@@ -15,7 +15,8 @@ export const Projects = () => {
             title: "Fighting Game",
             description: '1v1 fighting Game coded in Javascript with Canvas',
             imgUrl: projectImgGameOne,
-            link: 'https://carlos-game-fightingko.netlify.app/'
+            link: 'https://carlos-game-fightingko.netlify.app/',
+            beta: false,
         },
 
     ]
@@ -24,13 +25,15 @@ export const Projects = () => {
             title: "Crypto API",
             description: 'Crypto Website with real time crypto news and crypto prices',
             imgUrl: projectImg1,
-            link: 'https://carlos-crypto-project.netlify.app/'
+            link: 'https://carlos-crypto-project.netlify.app/',
+            beta: false,
         },
         {
             title: "Crypto API - Currently in Beta - Still In Progress of being built",
             description: 'Fitness Website that includes full crud functionality and tracks your lifts everyday',
             imgUrl: fitnessImg,
-            link: 'https://fitness-project-carlos.netlify.app/'
+            link: 'https://fitness-project-carlos.netlify.app/',
+            beta: true,
         }
     ]
     const misc = [
@@ -38,7 +41,8 @@ export const Projects = () => {
             title: "Instagram Clone",
             description: 'Simple HTML CSS of Instagrams webpage',
             imgUrl: instagramCss,
-            link: 'https://leafy-trifle-02c195.netlify.app/'
+            link: 'https://leafy-trifle-02c195.netlify.app/',
+            beta: false,
         },
     ]
 
