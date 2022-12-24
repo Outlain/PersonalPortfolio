@@ -3,6 +3,7 @@ import projectImg1 from "../assets/img/Crypto-Website.png"
 import projectImgGameOne from "../assets/img/fightingGame.png"
 import instagramCss from "../assets/img/instagramCss.png"
 import fitnessImg from "../assets/img/projectsFitnessWebsite.png"
+import locationWorkImg from '../assets/img/projectLocationWork.png'
 import { useState } from "react"
 import { ProjectCard } from "../components/ProjectCard"
 
@@ -38,10 +39,17 @@ export const Projects = () => {
     ]
     const misc = [
         {
+            title: "Geolocation South-Florida",
+            description: 'Fully Functioning Website with hardcorded data on communities in South-Florida',
+            imgUrl: locationWorkImg,
+            link: 'https://leafy-trifle-02c195.netlify.app/',
+            beta: false,
+        },
+        {
             title: "Instagram Clone",
             description: 'Simple HTML CSS of Instagrams webpage',
             imgUrl: instagramCss,
-            link: 'https://leafy-trifle-02c195.netlify.app/',
+            link: 'https://carlosgeolocation.netlify.app/',
             beta: false,
         },
     ]
