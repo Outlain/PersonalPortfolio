@@ -42,14 +42,14 @@ export const Projects = () => {
             title: "Geolocation South-Florida",
             description: 'Fully Functioning Website with hardcorded data on communities in South-Florida',
             imgUrl: locationWorkImg,
-            link: 'https://leafy-trifle-02c195.netlify.app/',
+            link: 'https://carlosgeolocation.netlify.app/',
             beta: false,
         },
         {
             title: "Instagram Clone",
             description: 'Simple HTML CSS of Instagrams webpage',
             imgUrl: instagramCss,
-            link: 'https://carlosgeolocation.netlify.app/',
+            link: 'https://leafy-trifle-02c195.netlify.app/',
             beta: false,
         },
     ]
