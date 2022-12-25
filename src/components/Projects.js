@@ -30,8 +30,8 @@ export const Projects = () => {
             beta: false,
         },
         {
-            title: "Crypto API - Currently in Beta - Still In Progress of being built",
-            description: 'Fitness Website that includes full crud functionality and tracks your lifts everyday',
+            title: "Fitness Tracker- Currently in Beta - Still In Progress of being built",
+            description: 'Fitness Website with SQL database that includes full crud functionality and tracks your workouts everyday',
             imgUrl: fitnessImg,
             link: 'https://fitness-project-carlos.netlify.app/',
             beta: true,
