@@ -4,6 +4,7 @@ import projectImgGameOne from "../assets/img/fightingGame.png"
 import instagramCss from "../assets/img/instagramCss.png"
 import fitnessImg from "../assets/img/projectsFitnessWebsite.png"
 import locationWorkImg from '../assets/img/projectLocationWork.png'
+import cryptoV2 from '../assets/img/projectscryptov2.png'
 import { useState } from "react"
 import { ProjectCard } from "../components/ProjectCard"
 
@@ -30,10 +31,17 @@ export const Projects = () => {
             beta: false,
         },
         {
-            title: "Fitness Tracker- Currently in Beta - Still In Progress of being built",
+            title: "Fitness Tracker- (in Porgress)",
             description: 'Fitness Website with SQL database that includes full crud functionality and tracks your workouts everyday',
             imgUrl: fitnessImg,
             link: 'https://fitness-project-carlos.netlify.app/',
+            beta: true,
+        },
+        {
+            title: "Crypto Real Time Version 2 - (in Porgress)",
+            description: 'Three pages crypto Website with realtime crypto data that auto updates prices and charts',
+            imgUrl: cryptoV2,
+            link: 'https://crypto-website-v2-jh4ifmi0m-outlain.vercel.app/',
             beta: true,
         }
     ]
