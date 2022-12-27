@@ -24,6 +24,13 @@ export const Projects = () => {
     ]
     const fullStack = [
         {
+            title: "Crypto Real Time Version 2 - (in Porgress)",
+            description: 'Three pages crypto Website with realtime crypto data that auto updates prices and charts',
+            imgUrl: cryptoV2,
+            link: 'https://crypto-website-v2-jh4ifmi0m-outlain.vercel.app/',
+            beta: true,
+        },
+        {
             title: "Crypto API",
             description: 'Crypto Website with real time crypto news and crypto prices',
             imgUrl: projectImg1,
@@ -35,13 +42,6 @@ export const Projects = () => {
             description: 'Fitness Website with SQL database that includes full crud functionality and tracks your workouts everyday',
             imgUrl: fitnessImg,
             link: 'https://fitness-project-carlos.netlify.app/',
-            beta: true,
-        },
-        {
-            title: "Crypto Real Time Version 2 - (in Porgress)",
-            description: 'Three pages crypto Website with realtime crypto data that auto updates prices and charts',
-            imgUrl: cryptoV2,
-            link: 'https://crypto-website-v2-jh4ifmi0m-outlain.vercel.app/',
             beta: true,
         }
     ]
@@ -126,9 +126,9 @@ export const Projects = () => {
                     <p>These are the projects I have worked on ranging from hours to days to weeks to complete! <br /> They are organized into three actagories, Mini-games (usually through CANVAS or PyGame), Full-Stack websites that range from API to full CRUD, and MISC for all others!</p>
                 </section>
                 <section className={allClicked}>
-                    <button onClick={handleOnclickGames} className="left">Games</button>
-                    <button onClick={handleOnclickFullStack} className="center">Full-Stack</button>
-                    <button onClick={handleOnclickMisc} className="right">Misc</button>
+                    <button onClick={handleOnclickGames} className="left">Mini-Games</button>
+                    <button onClick={handleOnclickFullStack} className="center">Dynamic Websites</button>
+                    <button onClick={handleOnclickMisc} className="right">Static Websites</button>
                 </section>
                 <section className="project-three">
                     {
