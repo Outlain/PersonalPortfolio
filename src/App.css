@@ -546,6 +546,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 @media screen and (max-width: 750px) {
+  .project-three {
+    height: 55%;
+    width: 90% !important;
+    /* background-color: rgba(178, 47, 47, 0.5); */
+    display: flex;
+    overflow: auto;
+  }
+  .project-inner {
+    padding: 2% 1%;
+    height: 100%;
+    /* width: 25%; */
+    overflow: auto;
+    flex: 1 1 0px;
+    min-width: 48% !important;
+  }
   .dimmer {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows:
@@ -648,12 +663,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 80%;
   /* background-color: rgba(178, 47, 47, 0.5); */
   display: flex;
-  flex-grow: 1;
+  overflow: auto;
 }
 .project-inner {
   padding: 2% 1%;
   height: 100%;
-  width: 100%;
+  /* width: 25%; */
+  overflow: auto;
+  flex: 1 1 0px;
+  min-width: 40%;
 }
 .project-inner-inner {
   height: 90%;
@@ -664,6 +682,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: auto;
 }
 .project-inner-inner-blur {
   backdrop-filter: blur(2.5px);
@@ -720,9 +739,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
   .project-two button {
     width: 30%;
+    font-size: 1.2rem;
   }
   .project-clicked button {
     width: 25%;
+  }
+  .project-three {
+    height: 55%;
+    width: 95% !important;
+    /* background-color: rgba(178, 47, 47, 0.5); */
+    display: flex;
+    overflow: auto;
+  }
+  .project-inner {
+    padding: 2% 1%;
+    height: 100%;
+    /* width: 25%; */
+    overflow: auto;
+    flex: 1 1 0px;
+    min-width: 88% !important;
   }
 }
 /*  SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION  */
