@@ -271,16 +271,49 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .dimmer {
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.8),
     rgba(0, 0, 0, 0.2) 50%,
     rgba(0, 0, 0, 0.7)
-  );
+  ); */
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
   /* grid-template-rows: repeat(4, minmax(0, 1fr)); */
   grid-template-rows: minmax(0, 1.3fr) minmax(0, 3fr) 1fr minmax(0, 4fr);
+  position: relative;
+  animation: expand 0.5s linear;
+}
+/* .home::after {
+  backdrop-filter: opacity(20%);
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.6)
+  );
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  transform: scale(1.5);
+  animation: expand 0.5s linear;
+} */
+@keyframes expand {
+  from {
+    transform: scale(1);
+    background-color: black;
+  }
+  50% {
+    transform: scale(0);
+    border-radius: 50%;
+  }
+  to {
+    transform: scale(1);
+  }
 }
 .banner-top {
   grid-column: 1 / span 2;
