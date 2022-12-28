@@ -282,7 +282,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* grid-template-rows: repeat(4, minmax(0, 1fr)); */
   grid-template-rows: minmax(0, 1.3fr) minmax(0, 3fr) 1fr minmax(0, 4fr);
   position: relative;
-  animation: expand 0.5s linear;
+  animation: expand 0.4s linear;
 }
 /* .home::after {
   backdrop-filter: opacity(20%);
@@ -304,10 +304,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 } */
 @keyframes expand {
   from {
-    transform: scale(1);
-    background-color: black;
-  }
-  50% {
     transform: scale(0);
     border-radius: 50%;
   }
