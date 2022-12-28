@@ -327,6 +327,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 8px 10px;
   background: rgba(148, 121, 102, 0.4);
   border: 0.05rem solid white;
+  /* backdrop-filter: invert(80%) brightness(80%); */
 }
 .banner-left-top h1 {
   font-size: 4rem;
@@ -424,6 +425,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #9eb9cb;
   margin: 0;
   padding: 1rem;
+  backdrop-filter: invert(80%) brightness(75%);
 }
 .banner-right h6:nth-child(odd) {
   backdrop-filter: blur(4px);
@@ -1138,8 +1140,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
   height: 80%;
   width: 30%;
-  border: 0.05rem solid white;
-  backdrop-filter: blur(4px);
+  /* border: 0.05rem solid rgb(0, 0, 0); */
+  backdrop-filter: blur(0px) invert(100%);
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   background-color: rgba(0, 0, 0, 0.4);
