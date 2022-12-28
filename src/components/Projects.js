@@ -27,7 +27,7 @@ export const Projects = () => {
             title: "Crypto Real Time Version 2 - (in Porgress)",
             description: 'Three pages crypto Website with realtime crypto data that auto updates prices and charts',
             imgUrl: cryptoV2,
-            link: 'https://crypto-website-v2-jh4ifmi0m-outlain.vercel.app/',
+            link: 'https://crypto-website-v2.vercel.app/',
             beta: true,
         },
         {
