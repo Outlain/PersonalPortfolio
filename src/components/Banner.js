@@ -84,12 +84,12 @@ export const Banner = () => {
                     <h5> I am a full-stack web developer with expertise in JavaScript, HTML, CSS, React, Node.js, and SQL. I have experience building scalable and secure RESTful APIs and responsive web applications. I am passionate about staying up-to-date on the latest technologies and am excited to bring my skills and enthusiasm to your team as we work on innovative and engaging web applications.</h5>
                 </div>
                 <div className="banner-right">
-                    <h6 className="banner-right-top creation1">{quotes ? quotes[0] : ''} <br /> (Randomly API Generated Quote) </h6>
-                    <h6 className="banner-right-right creation">{quotes ? quotes[1] : ''} <br /> (Randomly API Generated Quote) </h6>
-                    <h6 className="banner-right-left-top-left creation">{quotes ? quotes[2] : ''}  <br /> (Randomly API Generated Quote)</h6>
-                    <h6 className="banner-right-left-top-right creation">{quotes ? quotes[3] : ''} <br /> (Randomly API Generated Quote) </h6>
-                    <h6 className="banner-right-left-bottom-top creation1">{quotes ? quotes[4] : ''} <br /> (Randomly API Generated Quote) </h6>
-                    <h6 className="banner-right-left-bottom-bottom creation1">{quotes ? quotes[5] : ''} <br /> (Randomly API Generated Quote) </h6>
+                    <h6 className="banner-right-top creation1">{quotes ? quotes[0] : ''} </h6>
+                    <h6 className="banner-right-right creation">{quotes ? quotes[1] : ''} </h6>
+                    <h6 className="banner-right-left-top-left creation">{quotes ? quotes[2] : ''} </h6>
+                    <h6 className="banner-right-left-top-right creation">{quotes ? quotes[3] : ''} </h6>
+                    <h6 className="banner-right-left-bottom-top creation1">{quotes ? quotes[4] : ''} </h6>
+                    <h6 className="banner-right-left-bottom-bottom creation1">{quotes ? quotes[5] : ''} </h6>
                 </div>
             </div>
         </section>
