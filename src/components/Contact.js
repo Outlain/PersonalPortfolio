@@ -1,6 +1,6 @@
 import { useState } from "react";
 // import { Container, Col, div } from "react-bootstrap";
-import contactImg from "../assets/img/contactImg.jpeg"
+import contactImg from "../assets/img/contactImg.png"
 
 
 export const Contact = () => {
@@ -45,57 +45,59 @@ export const Contact = () => {
 
     return (
         <section className="contact" id="connect">
-            <div className="connect-left">
-                <img src={contactImg} alt="Contact Me" />
-            </div>
-            <div className="connect-right">
-                <h2>Get in touch</h2>
-                <form onSubmit={handleSubmit}>
-                    <span>
-                        <input
-                            type="text"
-                            value={formDetails.firstName}
-                            placeholder="First Name"
-                            onChange={(e) => onFormUpdate('firstName', e.target.value)}
-                        />
-                    </span>
-                    <span>
-                        <input
-                            type="text"
-                            value={formDetails.lastName}
-                            placeholder="Last Name"
-                            onChange={(e) => onFormUpdate('lastName', e.target.value)}
-                        />
-                    </span>
-                    <span>
-                        <input
-                            type="email"
-                            value={formDetails.email}
-                            placeholder="Email"
-                            onChange={(e) => onFormUpdate('email', e.target.value)}
-                        />
-                    </span>
-                    <span>
-                        <input
-                            type="text"
-                            value={formDetails.phone}
-                            placeholder="Company Name (optional)"
-                            onChange={(e) => onFormUpdate('phone', e.target.value)}
-                        />
-                    </span>
-                    <span className="connect-right-message">
-                        <textarea vaue={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
-                    </span>
-                    <button type='submit'>
-                        <span>{buttonText}</span>
-                    </button>
-                    {
-                        status.message &&
-                        <span className="connect-right-result">
-                            <p className={status.succes === false ? 'There was an error' : "sucess"}>{status.message}</p>
+            <div className="connect-dimer">
+                <div className="connect-left">
+                    <img src={contactImg} alt="Contact Me" />
+                </div>
+                <div className="connect-right">
+                    <h2>Get in touch</h2>
+                    <form onSubmit={handleSubmit}>
+                        <span>
+                            <input
+                                type="text"
+                                value={formDetails.firstName}
+                                placeholder="First Name"
+                                onChange={(e) => onFormUpdate('firstName', e.target.value)}
+                            />
                         </span>
-                    }
-                </form>
+                        <span>
+                            <input
+                                type="text"
+                                value={formDetails.lastName}
+                                placeholder="Last Name"
+                                onChange={(e) => onFormUpdate('lastName', e.target.value)}
+                            />
+                        </span>
+                        <span>
+                            <input
+                                type="email"
+                                value={formDetails.email}
+                                placeholder="Email"
+                                onChange={(e) => onFormUpdate('email', e.target.value)}
+                            />
+                        </span>
+                        <span>
+                            <input
+                                type="text"
+                                value={formDetails.phone}
+                                placeholder="Company Name (optional)"
+                                onChange={(e) => onFormUpdate('phone', e.target.value)}
+                            />
+                        </span>
+                        <span className="connect-right-message">
+                            <textarea vaue={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
+                        </span>
+                        <button type='submit'>
+                            <span>{buttonText}</span>
+                        </button>
+                        {
+                            status.message &&
+                            <span className="connect-right-result">
+                                <p className={status.succes === false ? 'There was an error' : "sucess"}>{status.message}</p>
+                            </span>
+                        }
+                    </form>
+                </div>
             </div>
         </section>
     )

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 
-import stars from "../assets/img/stars.gif"
+// import stars from "../assets/img/skills-backgroundv4.webp"
+import stars from "../assets/img/skills-backgroundv42.png"
+// import stars from "../assets/img/skills-backgroundv3.png"
 import javaScript from "../assets/img/skills-javascript.png"
 import flask from '../assets/img/skills-flask.png'
 import pythonImg from '../assets/img/skills-python.png'
@@ -54,7 +56,7 @@ export const Skills = () => {
 
     return (
         <section
-            style={{ backgroundImage: `url(${stars})`, backgroundSize: 'cover' }}
+            style={{ backgroundImage: `url(${stars})` }}
             id="skills">
             <div className="dimmer-skills">
                 <div className="skills-left-top">

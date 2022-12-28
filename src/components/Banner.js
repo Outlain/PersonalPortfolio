@@ -81,7 +81,7 @@ export const Banner = () => {
                     <h1 className="wrap">{text}</h1>
                 </div>
                 <div className="banner-left-bottom">
-                    <h5> A full-stack web developer with a strong foundation in programming languages and libraries/frameworks, such as JavaScript, HTML, CSS, React, Node.js, SQL. In my previous and current roles at a Full-stack Web developer and software developer through work and school respectively, I have gained experience in building scalable and secure RESTful APIs, responsive and mobile-friendly highly interactive web applications. I am constantly seeking to expand my knowledge and skillset, and am adaptable to learning new technologies. I am excited to bring my skills and passion to your team and contribute to the development of innovative and engaging web applications.</h5>
+                    <h5> I am a full-stack web developer with expertise in JavaScript, HTML, CSS, React, Node.js, and SQL. I have experience building scalable and secure RESTful APIs and responsive web applications. I am passionate about staying up-to-date on the latest technologies and am excited to bring my skills and enthusiasm to your team as we work on innovative and engaging web applications.</h5>
                 </div>
                 <div className="banner-right">
                     <h6 className="banner-right-top creation1">{quotes ? quotes[0] : ''} <br /> (Randomly API Generated Quote) </h6>
