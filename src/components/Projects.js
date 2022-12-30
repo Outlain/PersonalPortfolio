@@ -1,11 +1,11 @@
 // import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
+import { useState, useEffect, useRef } from "react"
 import projectImg1 from "../assets/img/Crypto-Website.png"
 import projectImgGameOne from "../assets/img/fightingGame.png"
 import instagramCss from "../assets/img/instagramCss.png"
 import fitnessImg from "../assets/img/projectsFitnessWebsite.png"
 import locationWorkImg from '../assets/img/projectLocationWork.png'
 import cryptoV2 from '../assets/img/projectscryptov2.png'
-import { useState } from "react"
 import { ProjectCard } from "../components/ProjectCard"
 
 
@@ -22,7 +22,7 @@ export const Projects = () => {
         },
 
     ]
-    const fullStack = [
+    const fullStackWebsite = [
         {
             title: "Crypto Real Time Version 2 - (in Porgress)",
             description: 'Three pages crypto Website with realtime crypto data that auto updates prices and charts',
@@ -45,7 +45,7 @@ export const Projects = () => {
             beta: true,
         }
     ]
-    const misc = [
+    const staticWebsite = [
         {
             title: "Geolocation South-Florida",
             description: 'Fully Functioning Website with hardcorded data on communities in South-Florida',
@@ -62,62 +62,197 @@ export const Projects = () => {
         },
     ]
 
-    const empty = [
-
-    ]
+    const empty = []
 
     const [projectType, setProjectType] = useState(empty)
     const [allClicked, setAllClicked] = useState('not-all-clicked project-two')
+    const [isClicked, setIsClicked] = useState(false)
+    const [fixing, setfixing] = useState(false)
+
 
     const handleOnclickGames = () => {
         setAllClicked('project-clicked project-two')
         if (projectType.length > 0) {
             if (projectType[0].title === games[0].title) {
-                console.log(projectType[0].title)
+                clearInterval(scrollingId)
+                // console.log(projectType[0].title)
                 setProjectType(empty)
+                setIsClicked(false)
             }
             if (projectType[0].title !== games[0].title) {
-                console.log(projectType[0].title)
+                clearInterval(scrollingId)
+                // console.log(projectType[0].title)
+                setfixing(!fixing)
                 setProjectType(games)
+                setIsClicked(true)
             }
         }
         if (projectType.length === 0) {
+            clearInterval(scrollingId)
             setProjectType(games)
+            setIsClicked(true)
         }
+        // console.log(isClicked)
     }
-    const handleOnclickFullStack = () => {
+    const handleOnclickDynamic = () => {
         setAllClicked('project-clicked project-two')
         if (projectType.length > 0) {
-            if (projectType[0].title === fullStack[0].title) {
-                console.log(projectType[0].title)
+            if (projectType[0].title === fullStackWebsite[0].title) {
+                clearInterval(scrollingId)
+                // console.log(projectType[0].title)
                 setProjectType(empty)
+                setIsClicked(false)
             }
-            if (projectType[0].title !== fullStack[0].title) {
-                console.log(projectType[0].title)
-                setProjectType(fullStack)
+            if (projectType[0].title !== fullStackWebsite[0].title) {
+                // console.log(projectType[0].title)
+                clearInterval(scrollingId)
+                setfixing(!fixing)
+                setProjectType(fullStackWebsite)
+                setIsClicked(true)
             }
         }
         if (projectType.length === 0) {
-            setProjectType(fullStack)
+            clearInterval(scrollingId)
+            setProjectType(fullStackWebsite)
+            setIsClicked(true)
         }
+        // console.log(isClicked)
     }
-    const handleOnclickMisc = () => {
+    const handleOnclicStatic = () => {
         setAllClicked('project-clicked project-two')
         if (projectType.length > 0) {
-            if (projectType[0].title === misc[0].title) {
-                console.log(projectType[0].title)
+            if (projectType[0].title === staticWebsite[0].title) {
+                // console.log(projectType[0].title)
                 setProjectType(empty)
+                setIsClicked(false)
             }
-            if (projectType[0].title !== misc[0].title) {
-                console.log(projectType[0].title)
-                setProjectType(misc)
+            if (projectType[0].title !== staticWebsite[0].title) {
+                // console.log(projectType[0].title)
+                setfixing(!fixing)
+                setProjectType(staticWebsite)
+                setIsClicked(true)
             }
         }
         if (projectType.length === 0) {
-            setProjectType(misc)
+            setProjectType(staticWebsite)
+            setIsClicked(true)
         }
+        // console.log(isClicked)
     }
 
+    const scrollingId = useRef(null);
+
+    useEffect(() => {
+        console.log(`Change Has been Made to IsClicked : ${isClicked}`)
+
+        function infiniteScroll() {
+            if (!isClicked) {
+                clearInterval(scrollingId)
+            }
+
+            if (isClicked) {
+
+                // Get the scroll container element
+                const scrollContainer = document.querySelector('.project-three');
+                // Get the width of the scroll container element
+                const scrollContainerWidth = scrollContainer.offsetWidth;
+                console.log(scrollContainerWidth)
+                // Get all the scroll elements within the scroll container
+                const scrollElements = scrollContainer.querySelectorAll('.project-inner');
+                const maxwidth = scrollElements[0].offsetWidth * (scrollElements.length)
+                console.log(maxwidth)
+                const differenceWidth = maxwidth - scrollContainerWidth
+
+                console.log(differenceWidth)
+                if (differenceWidth > 5) {
+                    // Set the initial position of the scroll elements to the right of the scroll container
+                    scrollElements.forEach((scrollElement, index) => {
+                        scrollElement.style.transform = `translateX(${(scrollContainerWidth - (scrollContainerWidth / 4)) - scrollElement.offsetWidth}px)`;
+                    });
+
+                    // Set an interval to move the scroll elements to the left at a specific interval
+                    setInterval(() => {
+                        // Decrement the translateX value of the scroll elements by a small amount
+
+                        scrollElements.forEach((scrollElement, index) => {
+                            const currentTransform = scrollElement.style.transform;
+                            const currentTranslateX = parseInt(currentTransform.split('(')[1].split('px')[0]);
+                            scrollElement.style.transform = `translateX(${currentTranslateX - 1}px)`;
+                        });
+
+                        // Check if any of the scroll elements have moved out of the viewable area
+                        for (let i = 0; i < scrollElements.length; i++) {
+                            const currentScrollElement = scrollElements[i];
+                            const currentScrollElementTransformObject = currentScrollElement.style.transform;
+                            const currentScrollElementTranslateX = parseInt(currentScrollElementTransformObject.split('(')[1].split('px')[0]);
+
+                            // Reset the current scroll element's position to the right of the scroll container if it's out of bounds
+                            if (i > 0) {
+                                // console.log((Math.abs(currentScrollElementTranslateX)))
+                                // console.log(currentScrollElement.clientWidth)
+                                if (currentScrollElementTranslateX + (currentScrollElement.clientWidth * (i + 1)) < 0) {
+                                    currentScrollElement.style.transform = `translateX(${maxwidth - (currentScrollElement.clientWidth * (i + 1))}px)`;
+                                }
+                            } else {
+                                // console.log((Math.abs(currentScrollElementTranslateX)))
+                                // console.log(currentScrollElement.clientWidth)
+                                if (currentScrollElementTranslateX + (currentScrollElement.clientWidth * (i + 1)) < 0) {
+                                    currentScrollElement.style.transform = `translateX(${maxwidth - currentScrollElement.clientWidth}px)`;
+                                }
+                            }
+                        }
+                    }, 16);
+                }
+                // applying animation for divs with total lengths combined less than parent stucture width 
+                // applying animation for divs with total lengths combined less than parent stucture width 
+                else {
+                    scrollElements.forEach((scrollElement, index) => {
+                        scrollElement.style.transform = `translateX(${scrollElement.offsetWidth/2}px)`;
+                    });
+
+                    // Set an interval to move the scroll elements to the left at a specific interval
+                    scrollingId.current = setInterval(() => {
+                        // Decrement the translateX value of the scroll elements by a small amount
+
+                        scrollElements.forEach((scrollElement, index) => {
+                            const currentTransform = scrollElement.style.transform;
+                            const currentTranslateX = parseInt(currentTransform.split('(')[1].split('px')[0]);
+                            scrollElement.style.transform = `translateX(${currentTranslateX - 1}px)`;
+                        });
+
+                        // Check if any of the scroll elements have moved out of the viewable area
+                        for (let i = 0; i < scrollElements.length; i++) {
+                            const currentScrollElement = scrollElements[i];
+                            const currentScrollElementTransformObject = currentScrollElement.style.transform;
+                            const currentScrollElementTranslateX = parseInt(currentScrollElementTransformObject.split('(')[1].split('px')[0]);
+
+                            // Reset the current scroll element's position to the right of the scroll container if it's out of bounds
+                            if (i > 0) {
+                                // console.log((Math.abs(currentScrollElementTranslateX)))
+                                // console.log(currentScrollElement.clientWidth)
+                                if (currentScrollElementTranslateX + (currentScrollElement.clientWidth * (i + 1)) < 0) {
+                                    currentScrollElement.style.transform = `translateX(${scrollContainerWidth - currentScrollElement.clientWidth * (i)}px)`;
+                                }
+                            } else {
+                                // console.log((Math.abs(currentScrollElementTranslateX)))
+                                // console.log(currentScrollElement.clientWidth)
+                                if (currentScrollElementTranslateX + (currentScrollElement.clientWidth * (i + 1)) < 0) {
+                                    currentScrollElement.style.transform = `translateX(${scrollContainerWidth}px)`;
+                                }
+                            }
+                        }
+                    }, 16);
+
+
+                } // The interval time in milliseconds
+            }
+        }
+        if (isClicked) {
+            infiniteScroll()
+        }
+    }, [isClicked, fixing])
+
+    console.log(scrollingId)
     return (
         <section id="projects">
             <div className="dimmer2">
@@ -127,8 +262,8 @@ export const Projects = () => {
                 </section>
                 <section className={allClicked}>
                     <button onClick={handleOnclickGames} className="left">Mini-Games</button>
-                    <button onClick={handleOnclickFullStack} className="center">Dynamic Websites</button>
-                    <button onClick={handleOnclickMisc} className="right">Static Websites</button>
+                    <button onClick={handleOnclickDynamic} className="center">Dynamic Websites</button>
+                    <button onClick={handleOnclicStatic} className="right">Static Websites</button>
                 </section>
                 <section className="project-three">
                     {

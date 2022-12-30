@@ -663,7 +663,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     /* width: 25%; */
     overflow: auto;
     flex: 1 1 0px;
-    min-width: 48% !important;
+    min-width: 60% !important;
   }
   .dimmer {
     grid-template-columns: minmax(0, 1fr);
@@ -775,6 +775,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 80%;
   /* background-color: rgba(178, 47, 47, 0.5); */
   display: flex;
+  justify-content: flex-start;
   overflow: auto;
   border-radius: 20px;
 }
@@ -784,7 +785,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* width: 25%; */
   overflow: auto;
   flex: 1 1 0px;
-  min-width: 40%;
+  min-width: 60%;
 }
 .project-inner-inner {
   height: 90%;
@@ -871,7 +872,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     /* width: 25%; */
     overflow: auto;
     flex: 1 1 0px;
-    min-width: 88% !important;
+    min-width: 90% !important;
   }
   .banner-left-bottom h5 {
     width: 90%;
@@ -1154,7 +1155,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* border: 0.05rem solid rgb(0, 0, 0); */
   backdrop-filter: blur(0px) invert(100%);
   /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, */
-    /* 1px 1px 0 #000; */
+  /* 1px 1px 0 #000; */
   background-color: rgba(0, 0, 0, 0.4);
   color: rgb(34, 60, 81);
   border-radius: 10px;
