@@ -752,6 +752,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     -1.3px -1.3px 0 #000;
   backdrop-filter: blur(3px);
 }
+.left-chosen {
+  background: linear-gradient(90.21deg, #4a2fbd, #807050, #c4b091);
+}
+.center-chosen {
+  background: linear-gradient(90.21deg, #807050, #c4b091, #807050);
+}
+.right-chosen {
+  background: linear-gradient(90.21deg, #807050, #c4b091, #4a2fbd);
+}
 .project-two button:nth-child(1):hover {
   background: linear-gradient(90.21deg, #4a2fbd, #807050, #c4b091);
 }

@@ -98,26 +98,22 @@ export const Projects = () => {
     const [isClicked, setIsClicked] = useState(false);
     const [fixing, setfixing] = useState(false);
     const [elementHovered, setElementHovered] = useState(false);
+    const [tabChosenGames, setTabChosenGames] = useState(false);
+    const [tabChosenDynamic, setTabChosenDynamic] = useState(false);
+    const [tabChosenStatic, setTabChosenStatic] = useState(false);
 
-    const handleMouseOver = () => {
+
+
+    const handleScrollOver = () => {
         setElementHovered(true);
         // console.log(`The hovering/mousover/touch even has changed : ${elementHovered}`)
     };
 
-    const handleMouseOut = () => {
+    const handleScrollOut = () => {
         setElementHovered(false);
         // console.log(`The hovering/mousover/touch even has changed : ${elementHovered}`)
     };
 
-    const handleTouchStart = () => {
-        setElementHovered(true);
-        // console.log(`The hovering/mousover/touch even has changed : ${elementHovered}`)
-    };
-
-    const handleTouchEnd = () => {
-        setElementHovered(false);
-        // console.log(`The hovering/mousover/touch even has changed : ${elementHovered}`)
-    };
     const handleOnclickGames = () => {
         setAllClicked("project-clicked project-two");
         if (projectType.length > 0) {
@@ -181,6 +177,8 @@ export const Projects = () => {
         // console.log(isClicked)
         setfixing(!fixing);
     };
+
+
 
     const scrollingId = useRef(null);
 
@@ -346,6 +344,39 @@ export const Projects = () => {
     }, [elementHovered]);
 
 
+    useEffect(() => {
+        if (!isClicked) {
+            setTabChosenGames(false)
+            setTabChosenDynamic(false)
+            setTabChosenStatic(false)
+        }
+        // console.log(`Tab Hovered ${tabHovered}, ProjectType ${[projectType]}`)
+        if (projectType.length > 0) {
+
+            console.log(projectType[0].title === games[0].title)
+            if (isClicked && projectType[0].title === games[0].title) {
+                console.log('Games Chosen')
+                setTabChosenGames(true)
+            } else {
+                setTabChosenGames(false)
+            }
+            if (isClicked && projectType[0].title === fullStackWebsite[0].title) {
+                console.log('Dynamic Website Chosen')
+                setTabChosenDynamic(true)
+            } else {
+                setTabChosenDynamic(false)
+            }
+            if (isClicked && projectType[0].title === staticWebsite[0].title) {
+                console.log('Staic Website Chosen')
+                setTabChosenStatic(true)
+            } else {
+                setTabChosenStatic(false)
+            }
+        }
+    }, [isClicked, projectType, tabChosenStatic, fixing]);
+
+
+
     const memoizedCards = useMemo(() => {
         return projectType.map((project) => (
             <ProjectCard
@@ -358,6 +389,8 @@ export const Projects = () => {
             />
         ));
     }, [projectType]);
+
+
 
     // console.log(scrollingId.current);
     return (
@@ -374,21 +407,27 @@ export const Projects = () => {
                     </p>
                 </section>
                 <section className={allClicked}>
-                    <button onClick={handleOnclickGames} className="left">
+                    <button
+                        onClick={handleOnclickGames}
+                        className={tabChosenGames === true ? 'left-chosen left' : 'left'}>
                         Mini-Games
                     </button>
-                    <button onClick={handleOnclickDynamic} className="center">
+                    <button
+                        onClick={handleOnclickDynamic}
+                        className={tabChosenDynamic === true ? 'center-chosen center' : 'center'}>
                         Dynamic Websites
                     </button>
-                    <button onClick={handleOnclicStatic} className="right">
+                    <button
+                        onClick={handleOnclicStatic}
+                        className={tabChosenStatic === true ? 'right-chosen right' : 'right'}>
                         Static Websites
                     </button>
                 </section>
                 <section
-                    onMouseOver={handleMouseOver}
-                    onMouseOut={handleMouseOut}
-                    onTouchStart={handleTouchStart}
-                    onTouchEnd={handleTouchEnd}
+                    onMouseOver={handleScrollOver}
+                    onMouseOut={handleScrollOut}
+                    onTouchStart={handleScrollOver}
+                    onTouchEnd={handleScrollOut}
                     className="project-three">
                     {memoizedCards}
                 </section>
