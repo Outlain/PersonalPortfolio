@@ -1,6 +1,6 @@
 export const ProjectCard = ({ title, description, imgUrl, link, beta }) => {
     return (
-        <div className="project-inner">
+        <div className="project-inner" style={{transform: 'translateX(0px)'}}>
             <a href={link}>
                 <div className="project-inner-inner" style={{ backgroundImage: `url(${imgUrl})` }}>
                     <div className="project-inner-inner-blur">
