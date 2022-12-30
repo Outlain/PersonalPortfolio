@@ -195,15 +195,15 @@ export const Projects = () => {
                     const scrollContainer = document.querySelector(".project-three");
                     // Get the width of the scroll container element
                     const scrollContainerWidth = scrollContainer.offsetWidth;
-                    console.log(scrollContainerWidth);
+                    // console.log(scrollContainerWidth);
                     // Get all the scroll elements within the scroll container
                     const scrollElements =
                         scrollContainer.querySelectorAll(".project-inner");
                     const maxwidth = scrollElements[0].offsetWidth * scrollElements.length;
-                    console.log(maxwidth);
+                    // console.log(maxwidth);
                     const differenceWidth = maxwidth - scrollContainerWidth;
 
-                    console.log(differenceWidth);
+                    // console.log(differenceWidth);
                     if (differenceWidth > 5) {
                         // REMOVED STYLING AND ADDED DIRECTLY INTO CSS SO ELEMENTES WOULD NOT CHANGE LOCATION DURING ON HOVER EVEN CHANGES
                         // Set the initial position of the scroll elements to the right of the scroll container
@@ -353,21 +353,21 @@ export const Projects = () => {
         // console.log(`Tab Hovered ${tabHovered}, ProjectType ${[projectType]}`)
         if (projectType.length > 0) {
 
-            console.log(projectType[0].title === games[0].title)
+            // console.log(projectType[0].title === games[0].title)
             if (isClicked && projectType[0].title === games[0].title) {
-                console.log('Games Chosen')
+                // console.log('Games Chosen')
                 setTabChosenGames(true)
             } else {
                 setTabChosenGames(false)
             }
             if (isClicked && projectType[0].title === fullStackWebsite[0].title) {
-                console.log('Dynamic Website Chosen')
+                // console.log('Dynamic Website Chosen')
                 setTabChosenDynamic(true)
             } else {
                 setTabChosenDynamic(false)
             }
             if (isClicked && projectType[0].title === staticWebsite[0].title) {
-                console.log('Staic Website Chosen')
+                // console.log('Staic Website Chosen')
                 setTabChosenStatic(true)
             } else {
                 setTabChosenStatic(false)
