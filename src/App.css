@@ -758,6 +758,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   0 0 25px #4a2fbd,
   0 0 50px #c4b091,
   0 0 200px #c4b091;
+  -webkit-box-reflect:above 1px linear-gradient(#0005,transparent );
+  
 }
 .center-chosen {
   background: linear-gradient(90.21deg, #807050, #c4b091, #807050);
@@ -765,6 +767,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   0 0 25px #c4b091,
   0 0 50px #c4b091,
   0 0 200px #c4b091;
+  -webkit-box-reflect:above 1px linear-gradient(#0005,transparent );
 }
 .right-chosen {
   background: linear-gradient(90.21deg, #807050, #c4b091, #4a2fbd);
@@ -772,6 +775,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   0 0 25px #4a2fbd,
   0 0 50px #c4b091,
   0 0 200px #c4b091;
+  -webkit-box-reflect:above 1px linear-gradient(#0005,transparent );
 }
 .project-two button:nth-child(1):hover {
   background: linear-gradient(90.21deg, #4a2fbd, #807050, #c4b091);
