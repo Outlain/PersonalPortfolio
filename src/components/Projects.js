@@ -1,5 +1,5 @@
 // import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useMemo } from "react"
 import projectImg1 from "../assets/img/Crypto-Website.png"
 import projectImgGameOne from "../assets/img/fightingGame.png"
 import instagramCss from "../assets/img/instagramCss.png"
@@ -69,54 +69,47 @@ export const Projects = () => {
     const [isClicked, setIsClicked] = useState(false)
     const [fixing, setfixing] = useState(false)
 
-
     const handleOnclickGames = () => {
         setAllClicked('project-clicked project-two')
         if (projectType.length > 0) {
             if (projectType[0].title === games[0].title) {
-                clearInterval(scrollingId)
                 // console.log(projectType[0].title)
                 setProjectType(empty)
                 setIsClicked(false)
             }
             if (projectType[0].title !== games[0].title) {
-                clearInterval(scrollingId)
                 // console.log(projectType[0].title)
-                setfixing(!fixing)
                 setProjectType(games)
                 setIsClicked(true)
             }
         }
         if (projectType.length === 0) {
-            clearInterval(scrollingId)
             setProjectType(games)
             setIsClicked(true)
         }
         // console.log(isClicked)
+        setfixing(!fixing)
     }
     const handleOnclickDynamic = () => {
         setAllClicked('project-clicked project-two')
         if (projectType.length > 0) {
             if (projectType[0].title === fullStackWebsite[0].title) {
-                clearInterval(scrollingId)
                 // console.log(projectType[0].title)
                 setProjectType(empty)
                 setIsClicked(false)
             }
             if (projectType[0].title !== fullStackWebsite[0].title) {
                 // console.log(projectType[0].title)
-                clearInterval(scrollingId)
-                setfixing(!fixing)
                 setProjectType(fullStackWebsite)
                 setIsClicked(true)
             }
         }
         if (projectType.length === 0) {
-            clearInterval(scrollingId)
             setProjectType(fullStackWebsite)
             setIsClicked(true)
         }
         // console.log(isClicked)
+        setfixing(!fixing)
     }
     const handleOnclicStatic = () => {
         setAllClicked('project-clicked project-two')
@@ -128,7 +121,6 @@ export const Projects = () => {
             }
             if (projectType[0].title !== staticWebsite[0].title) {
                 // console.log(projectType[0].title)
-                setfixing(!fixing)
                 setProjectType(staticWebsite)
                 setIsClicked(true)
             }
@@ -138,6 +130,7 @@ export const Projects = () => {
             setIsClicked(true)
         }
         // console.log(isClicked)
+        setfixing(!fixing)
     }
 
     const scrollingId = useRef(null);
@@ -146,12 +139,7 @@ export const Projects = () => {
         console.log(`Change Has been Made to IsClicked : ${isClicked}`)
 
         function infiniteScroll() {
-            if (!isClicked) {
-                clearInterval(scrollingId)
-            }
-
             if (isClicked) {
-
                 // Get the scroll container element
                 const scrollContainer = document.querySelector('.project-three');
                 // Get the width of the scroll container element
@@ -171,7 +159,9 @@ export const Projects = () => {
                     });
 
                     // Set an interval to move the scroll elements to the left at a specific interval
-                    setInterval(() => {
+                    clearInterval(scrollingId.current);
+
+                    scrollingId.current = setInterval(() => {
                         // Decrement the translateX value of the scroll elements by a small amount
 
                         scrollElements.forEach((scrollElement, index) => {
@@ -207,10 +197,12 @@ export const Projects = () => {
                 // applying animation for divs with total lengths combined less than parent stucture width 
                 else {
                     scrollElements.forEach((scrollElement, index) => {
-                        scrollElement.style.transform = `translateX(${scrollElement.offsetWidth/2}px)`;
+                        scrollElement.style.transform = `translateX(${scrollElement.offsetWidth / 2}px)`;
                     });
 
                     // Set an interval to move the scroll elements to the left at a specific interval
+                    clearInterval(scrollingId.current);
+
                     scrollingId.current = setInterval(() => {
                         // Decrement the translateX value of the scroll elements by a small amount
 
@@ -252,7 +244,21 @@ export const Projects = () => {
         }
     }, [isClicked, fixing])
 
-    console.log(scrollingId)
+    const memoizedCards = useMemo(() => {
+        return projectType.map(project => (
+            <ProjectCard
+                key={project.title}
+                title={project.title}
+                description={project.description}
+                imgUrl={project.imgUrl}
+                link={project.link}
+                beta={project.beta}
+            />
+        ));
+    }, [projectType]);
+
+
+    console.log(scrollingId.current)
     return (
         <section id="projects">
             <div className="dimmer2">
@@ -267,11 +273,7 @@ export const Projects = () => {
                 </section>
                 <section className="project-three">
                     {
-                        projectType.map((x, index) => {
-                            return (
-                                <ProjectCard key={index} {...x} />
-                            )
-                        })
+                        memoizedCards
                     }
                 </section>
             </div>
