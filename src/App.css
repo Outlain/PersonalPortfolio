@@ -732,7 +732,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* background-color: red; */
 }
 .project-one p {
-  width: 50%;
+  width: 55%;
+  font-size: 1.5rem;
+  overflow: auto;
+  text-align: justify;
 }
 .project-two {
   height: 10%;

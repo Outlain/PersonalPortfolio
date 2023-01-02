@@ -399,11 +399,7 @@ export const Projects = () => {
                 <section className="project-one">
                     <h1>Projects</h1>
                     <p>
-                        These are the projects I have worked on ranging from hours to days
-                        to weeks to complete! <br /> They are organized into three
-                        actagories, Mini-games (usually through CANVAS or PyGame),
-                        Full-Stack websites that range from API to full CRUD, and MISC for
-                        all others!
+                    I have completed numerous projects with durations ranging from a few hours to several weeks. These projects have included a wide range of challenges and have allowed me to hone my skills in full-stack development, including back-end technologies such as Node.js, Express, and SQL. My portfolio includes a variety of project types, including interactive mini-games built with platforms such as CANVAS and PyGame, dynamic websites featuring API integration and full CRUD functionality, and a range of static websites.
                     </p>
                 </section>
                 <section className={allClicked}>
