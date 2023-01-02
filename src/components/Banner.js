@@ -20,7 +20,12 @@ export const Banner = () => {
             url: process.env.REACT_APP_BANNER_URL_V_TWO,
         };
 
-        axiosRetry(axios, { retries: 10 }); // retry the request up to 3 times, with a 1 second delay between each retry
+        axiosRetry(axios, {
+            retries: 10,
+            retryDelay: (retryCount) => {
+                return retryCount * 2000;
+            }
+        }); // retry the request up to 10 times, with a 1 second delay between each retry
 
         axios.request(optionsBackUp).then(function (response) {
             SetQuotes(response.data)
@@ -82,7 +87,6 @@ export const Banner = () => {
 
         let paragraphWrapper = document.querySelectorAll('.banner-left-bottom > h5');
         paragraphWrapper = paragraphWrapper[0]
-        console.log(paragraphWrapper)
         const quotesWrapper = document.querySelector('.banner-right');
         const quotesWrapperHeight = document.querySelector('#home').offsetHeight
         const innerQuotesArray = [...quotesWrapper.children]
@@ -91,9 +95,9 @@ export const Banner = () => {
         const realQuotesWrapperWidth = document.querySelector('.banner-right').offsetWidth
         const squareHeight = realQuotesWrapperHeight / 6
         const squareWidth = realQuotesWrapperWidth / 3
-        console.log(innerQuotesArray)
+        // console.log(innerQuotesArray)
         const webpageWidth = document.documentElement.clientWidth;
-        console.log(webpageWidth)
+        // console.log(webpageWidth)
         if (webpageWidth >= 1500 && webpageWidth <= 1810) {
             setStyling(
                 `
@@ -238,7 +242,7 @@ export const Banner = () => {
             }
             @keyframes glow {
                 0% {
-                    border: solid 0.1rem white;
+                    border: solid 0.1rem #b38a74;
                 }
                 1% {
                     border: none;
@@ -250,11 +254,11 @@ export const Banner = () => {
                 70% {
                 }
                 71% {
-                    border: solid 0.1rem white;
+                    border: solid 0.1rem #b38a74;
 
                 }
                 100%{
-                    border: solid 0.1rem white;
+                    border: solid 0.1rem #b38a74;
 
                 }
             }
@@ -373,7 +377,7 @@ export const Banner = () => {
          }
          @keyframes glow {
             0% {
-                border: solid 0.1rem white;
+                border: solid 0.1rem #b38a74;
 
             }
             2% {
@@ -384,11 +388,11 @@ export const Banner = () => {
             }
 
             66% {
-                border: solid 0.1rem white;
+                border: solid 0.1rem #b38a74;
 
             }
             100%{
-                border: solid 0.1rem white;
+                border: solid 0.1rem #b38a74;
 
             }
         }
