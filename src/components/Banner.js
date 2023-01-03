@@ -271,16 +271,24 @@ export const Banner = () => {
                 `
           @keyframes right_top {
             0% {
-
+        
             }
-            45% {
+            40% {
+                height: auto;
+                width: auto;
+                transform: translateX(${0}px) translateY(${0}px) rotate(0deg) scaleX(1) scaleY(1);
 
             }
             50% {
-                transform: translateX(${squareWidth}px)
+                height: ${squareWidth}px;
+                width: ${squareHeight * 3}px;
+                transform-origin: 0 0;  /* Top left corner of the element */
+                transform: rotate(90deg)  translateX(${squareHeight}px) translateY(${-squareWidth}px)
             }
             65% {
-                transform: translateX(${0}px)
+                height: auto;
+                width: auto;
+                transform: translateX(${0}px) translateY(${0}px) rotate(0deg) scaleX(1) scaleY(1);
 
             }
             100%{
@@ -291,14 +299,22 @@ export const Banner = () => {
             0% {
 
             }
-            45% {
+            40% {
+                height: auto;
+                width: auto;
+                transform: translateX(${0}px) translateY(${0}px) rotate(0deg) scaleX(1) scaleY(1);
 
             }
             50% {
-
+                height: ${squareWidth * 2}px;
+                width: ${squareHeight}px;
+                transform-origin: 0% 0%;  /* Top left corner of the element */
+                transform: rotate(90deg)  translateX(${squareHeight * 5}px) translateY(${0}px) scaleX(-1)
             }
             65% {
-
+                height: auto;
+                width: auto;
+                transform: translateX(${0}px) translateY(${0}px) rotate(0deg) scaleX(1) scaleY(1);
             }
             100%{
 
@@ -308,15 +324,22 @@ export const Banner = () => {
             0% {
 
             }
-            45% {
+            40% {
+                height: auto;
+                width: auto;
+                transform: translateX(${0}px) translateY(${0}px) rotate(0deg) scaleX(1) scaleY(1);
 
             }
             50% {
-               transform: translateY(${-squareHeight}px)
-            }
+                height: ${squareWidth * 3}px;
+                width: ${squareHeight}px;
+                transform-origin: 0 0;  /* Top left corner of the element */
+                transform: rotate(-90deg)  translateX(${0}px) translateY(${0}px)      
+              }
             65% {
-                transform: translateY(${0}px)
-
+                height: auto;
+                width: auto;
+                transform: translateX(${0}px) translateY(${0}px) rotate(0deg) scaleX(1) scaleY(1);
             }
             100%{
 
@@ -326,14 +349,22 @@ export const Banner = () => {
             0% {
 
             }
-            45% {
+            40% {
+                height: auto;
+                width: auto;
+                transform: translateX(${0}px) translateY(${0}px) rotate(0deg) scaleX(1) scaleY(1);
 
             }
             50% {
-                transform: translateY(${squareHeight}px)
-            }
+                height: ${squareWidth * 2}px;
+                width: ${squareHeight}px;
+                transform-origin: 0 0;  /* Top left corner of the element */
+                transform: rotate(90deg)  translateX(${squareHeight * 4}px) translateY(${-squareWidth}px)   scaleX(-1)
+              }
             65% {
-                transform: translateY(${0}px)
+                height: auto;
+                width: auto;
+                transform: translateX(${0}px) translateY(${0}px) rotate(0deg) scaleX(1) scaleY(1);
 
             }
             100%{
@@ -342,19 +373,28 @@ export const Banner = () => {
           }
           @keyframes right_left_bottom_top {
             0% {
+                // transform: scaleY(-1) scaleX(-1)            
 
             }
-            45% {
+            40% {
+                height: auto;
+                width: auto;
+                transform: translateX(${0}px) translateY(${0}px) rotate(0deg) scaleX(1) scaleY(1);
 
             }
             50% {
-                transform: translateX(${-squareWidth}px)
+                height: ${squareWidth}px;
+                width: ${squareHeight * 3}px;
+                transform-origin: 0% 0%;  /* Top left corner of the element */
+                transform: rotate(90deg)  translateX(${0}px) translateY(${-squareWidth}px)   scaleY(-1) scaleX(-1)            
             }
             65% {
-                transform: translateX(${0}px)
-
+                height: auto;
+                width: auto;
+                transform: translateX(${0}px) translateY(${0}px) rotate(0deg) scaleX(1) scaleY(1);
             }
             100%{
+                // transform: scaleY(-1) scaleX(-1)            
 
             }
           }
@@ -362,14 +402,23 @@ export const Banner = () => {
             0% {
 
             }
-            45% {
+            40% {
+                height: auto;
+                width: auto;
+                transform: translateX(${0}px) translateY(${0}px) rotate(0deg) scaleX(1) scaleY(1);
+                
 
             }
             50% {
-
+                height: ${squareWidth}px;
+                width: ${squareHeight * 5}px;
+                transform-origin: 0% 0%;  /* Top left corner of the element */
+                transform: rotate(-90deg)  translateX(${-squareHeight}px) translateY(${squareWidth * 2}px)      
             }
             65% {
-
+                height: auto;
+                width: auto;
+                transform: translateX(${0}px) translateY(${0}px) rotate(0deg) scaleX(1) scaleY(1);
             }
             100%{
 
@@ -377,23 +426,36 @@ export const Banner = () => {
          }
          @keyframes glow {
             0% {
-                border: solid 0.1rem #b38a74;
-
+                box-shadow: 0 0 3px #b38a74, 0 0 6px #b38a74, 0 0 19px #b38a74, 0 0 64px #b38a74;
             }
-            2% {
+            39% {
+                box-shadow: 0 0 3px #b38a74, 0 0 6px #b38a74, 0 0 19px #b38a74, 0 0 64px #b38a74;
+            }
+            40% {
                 border: none;
-
+                box-shadow: none;
             }
-            61% {
+            49% {
+                border: none;
+                box-shadow: none;
+            }
+            50% {
+                box-shadow: 0 0 3px #b38a74, 0 0 6px #b38a74, 0 0 19px #b38a74, 0 0 64px #b38a74;
+            }
+            51% {
+                border: none;
+                box-shadow: none;
+            }
+            65% {
+                border: none;
+                box-shadow: none;
             }
 
             66% {
-                border: solid 0.1rem #b38a74;
-
+                box-shadow: 0 0 3px #b38a74, 0 0 6px #b38a74, 0 0 19px #b38a74, 0 0 64px #b38a74;
             }
             100%{
-                border: solid 0.1rem #b38a74;
-
+                box-shadow: 0 0 3px #b38a74, 0 0 6px #b38a74, 0 0 19px #b38a74, 0 0 64px #b38a74;
             }
         }
           
@@ -403,67 +465,67 @@ export const Banner = () => {
 
 
         // SET INDIVIDUAL Y TRANSLATE HEIGHTS SO EACH ELEMENT HAS ITS CORERCT HIGHT TRANSLATION TO PUT IT RIGHT ABOVE THE PAGE
-        innerQuotesArray[0].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight * 5}px)`;
-        innerQuotesArray[1].style.transform = `translateY(${-quotesWrapperHeight}px)`;
-        innerQuotesArray[2].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight * 2}px)`;
-        innerQuotesArray[3].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight * 2}px)`;
-        innerQuotesArray[5].style.transform = `translateY(${-quotesWrapperHeight}px)`;
-        innerQuotesArray[4].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight}px)`;
+        // innerQuotesArray[0].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight * 5}px)`;
+        // innerQuotesArray[1].style.transform = `translateY(${-quotesWrapperHeight}px)`;
+        // innerQuotesArray[2].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight * 2}px)`;
+        // innerQuotesArray[3].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight * 2}px)`;
+        // innerQuotesArray[5].style.transform = `translateY(${-quotesWrapperHeight}px)`;
+        // innerQuotesArray[4].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight}px)`;
 
 
-        // console.log(innerQuotesArray[1])
-        function tetris() {
-            clearInterval(scrollingId.current);
+        // // console.log(innerQuotesArray[1])
+        // function tetris() {
+        //     clearInterval(scrollingId.current);
 
-            if (scrollingId.current) {
-                clearInterval(scrollingId.current);
-            }
-            var currentQuote = 0
-            var acceleration = 1
+        //     if (scrollingId.current) {
+        //         clearInterval(scrollingId.current);
+        //     }
+        //     var currentQuote = 0
+        //     var acceleration = 1
 
-            const currentQuoteArray = [1, 5, 4, 3, 2, 0]
-            if (scrollingId.current) { clearInterval(scrollingId.current); }
-            scrollingId.current = setInterval(() => {
-                try {
-                    console.log('Running')
-                    const currentTransform = innerQuotesArray[currentQuoteArray[currentQuote]].style.transform;
-                    // console.log(currentTransform)
-                    const currentTranslateY = parseInt(
-                        currentTransform.split("(")[1].split("px")[0]
-                    );
+        //     const currentQuoteArray = [1, 5, 4, 3, 2, 0]
+        //     if (scrollingId.current) { clearInterval(scrollingId.current); }
+        //     scrollingId.current = setInterval(() => {
+        //         try {
+        //             console.log('Running')
+        //             const currentTransform = innerQuotesArray[currentQuoteArray[currentQuote]].style.transform;
+        //             // console.log(currentTransform)
+        //             const currentTranslateY = parseInt(
+        //                 currentTransform.split("(")[1].split("px")[0]
+        //             );
 
-                    innerQuotesArray[currentQuoteArray[currentQuote]].style.transform = `translateY(${currentTranslateY + 1 + acceleration}px)`
-                    if (acceleration < 6) {
-                        acceleration = acceleration * 1.02
-                    }
-                    if (currentTranslateY >= 0) {
-                        innerQuotesArray[currentQuoteArray[currentQuote]].style.transform = `translateY(${0}px)`
-                        acceleration = 1
-                        currentQuote += 1
-                    }
+        //             innerQuotesArray[currentQuoteArray[currentQuote]].style.transform = `translateY(${currentTranslateY + 1 + acceleration}px)`
+        //             if (acceleration < 6) {
+        //                 acceleration = acceleration * 1.02
+        //             }
+        //             if (currentTranslateY >= 0) {
+        //                 innerQuotesArray[currentQuoteArray[currentQuote]].style.transform = `translateY(${0}px)`
+        //                 acceleration = 1
+        //                 currentQuote += 1
+        //             }
 
-                    if (currentQuote === currentQuoteArray.length && currentTranslateY >= 0) {
+        //             if (currentQuote === currentQuoteArray.length && currentTranslateY >= 0) {
 
-                        innerQuotesArray[0].classList.add("banner_right_top_animation");
-                        innerQuotesArray[1].classList.add("banner_right_right_animation");
-                        innerQuotesArray[2].classList.add("banner_right_left_top_left_animation");
-                        innerQuotesArray[3].classList.add("banner_right_left_top_right_animation");
-                        innerQuotesArray[4].classList.add("banner_right_left_bottom_top_animation");
-                        innerQuotesArray[5].classList.add("banner_right_left_bottom_bottom_animation");
-                        quotesWrapper.classList.add("glow_animation");
-                        paragraphWrapper.classList.add("glow_animation");
-                        clearInterval(scrollingId.current);
-                    }
-                } catch (error) {
-                    console.error(error)
-                    if (scrollingId.current) { clearInterval(scrollingId.current); }
-                }
+        innerQuotesArray[0].classList.add("banner_right_top_animation");
+        innerQuotesArray[1].classList.add("banner_right_right_animation");
+        innerQuotesArray[2].classList.add("banner_right_left_top_left_animation");
+        innerQuotesArray[3].classList.add("banner_right_left_top_right_animation");
+        innerQuotesArray[4].classList.add("banner_right_left_bottom_top_animation");
+        innerQuotesArray[5].classList.add("banner_right_left_bottom_bottom_animation");
+        quotesWrapper.classList.add("glow_animation");
+        paragraphWrapper.classList.add("glow_animation");
+        clearInterval(scrollingId.current);
+        //             }
+        //         } catch (error) {
+        //             console.error(error)
+        //             if (scrollingId.current) { clearInterval(scrollingId.current); }
+        //         }
 
-            }, 10);
+        //     }, 10);
 
-        }
+        // }
 
-        tetris()
+        // tetris()
 
     }, [])
     useEffect(() => {

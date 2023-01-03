@@ -509,31 +509,31 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .banner_right_top_animation {
-  animation: right_top ease-in 12s infinite;
+  animation: right_top ease-out 12s infinite;
   /* background-color: red !important; */
 }
 .banner_right_right_animation {
-  animation: right_right ease-in 12s infinite;
+  animation: right_right ease-out 12s infinite;
   /* background-color: red !important; */
 }
 .banner_right_left_top_left_animation {
-  animation: right_left_top_left ease-in 12s infinite;
+  animation: right_left_top_left ease-out 12s infinite;
   /* background-color: red !important; */
 }
 .banner_right_left_top_right_animation {
-  animation: right_left_top_right ease-in 12s infinite;
+  animation: right_left_top_right ease-out 12s infinite;
   /* background-color: red !important; */
 }
 .banner_right_left_bottom_top_animation {
-  animation: right_left_bottom_top ease-in 12s infinite;
+  animation: right_left_bottom_top ease-out 12s infinite;
   /* background_color: red !important; */
 }
 .banner_right_left_bottom_bottom_animation {
-  animation: right_left_bottom_bottom ease-in 12s infinite;
+  animation: right_left_bottom_bottom ease-out 12s infinite;
   /* background-color: red !important; */
 }
 .glow_animation {
-  animation: glow ease-in 12s infinite;
+  animation: glow ease-out 12s infinite;
 }
 /* ALL BANNER RIGHT ALL BANNER RIGHT ALL BANNER RIGHT ALL BANNER RIGHT ALL BANNER RIGHT  */
 
@@ -585,7 +585,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
   .banner-left-bottom h5 {
     width: 80%;
-    animation: none;
   }
   .banner-right {
     grid-column: 1;
@@ -669,8 +668,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .dimmer {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows:
-      minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1.5fr) minmax(0, 4fr)
-      minmax(0, 11fr);
+      minmax(0, 1fr) minmax(0, 2fr) minmax(0, 0.5fr) minmax(0, 6fr)
+      minmax(0, 13fr);
   }
   .banner-left-bottom h5 {
     width: 90%;
