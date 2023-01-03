@@ -465,46 +465,46 @@ export const Banner = () => {
 
 
         // SET INDIVIDUAL Y TRANSLATE HEIGHTS SO EACH ELEMENT HAS ITS CORERCT HIGHT TRANSLATION TO PUT IT RIGHT ABOVE THE PAGE
-        // innerQuotesArray[0].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight * 5}px)`;
-        // innerQuotesArray[1].style.transform = `translateY(${-quotesWrapperHeight}px)`;
-        // innerQuotesArray[2].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight * 2}px)`;
-        // innerQuotesArray[3].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight * 2}px)`;
-        // innerQuotesArray[5].style.transform = `translateY(${-quotesWrapperHeight}px)`;
-        // innerQuotesArray[4].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight}px)`;
+        innerQuotesArray[0].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight * 5}px)`;
+        innerQuotesArray[1].style.transform = `translateY(${-quotesWrapperHeight}px)`;
+        innerQuotesArray[2].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight * 2}px)`;
+        innerQuotesArray[3].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight * 2}px)`;
+        innerQuotesArray[5].style.transform = `translateY(${-quotesWrapperHeight}px)`;
+        innerQuotesArray[4].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight}px)`;
 
 
-        // // console.log(innerQuotesArray[1])
-        // function tetris() {
-        //     clearInterval(scrollingId.current);
+        // console.log(innerQuotesArray[1])
+        function tetris() {
+            clearInterval(scrollingId.current);
 
-        //     if (scrollingId.current) {
-        //         clearInterval(scrollingId.current);
-        //     }
-        //     var currentQuote = 0
-        //     var acceleration = 1
+            if (scrollingId.current) {
+                clearInterval(scrollingId.current);
+            }
+            var currentQuote = 0
+            var acceleration = 1
 
-        //     const currentQuoteArray = [1, 5, 4, 3, 2, 0]
-        //     if (scrollingId.current) { clearInterval(scrollingId.current); }
-        //     scrollingId.current = setInterval(() => {
-        //         try {
-        //             console.log('Running')
-        //             const currentTransform = innerQuotesArray[currentQuoteArray[currentQuote]].style.transform;
-        //             // console.log(currentTransform)
-        //             const currentTranslateY = parseInt(
-        //                 currentTransform.split("(")[1].split("px")[0]
-        //             );
+            const currentQuoteArray = [1, 5, 4, 3, 2, 0]
+            if (scrollingId.current) { clearInterval(scrollingId.current); }
+            scrollingId.current = setInterval(() => {
+                try {
+                    console.log('Running')
+                    const currentTransform = innerQuotesArray[currentQuoteArray[currentQuote]].style.transform;
+                    // console.log(currentTransform)
+                    const currentTranslateY = parseInt(
+                        currentTransform.split("(")[1].split("px")[0]
+                    );
 
-        //             innerQuotesArray[currentQuoteArray[currentQuote]].style.transform = `translateY(${currentTranslateY + 1 + acceleration}px)`
-        //             if (acceleration < 6) {
-        //                 acceleration = acceleration * 1.02
-        //             }
-        //             if (currentTranslateY >= 0) {
-        //                 innerQuotesArray[currentQuoteArray[currentQuote]].style.transform = `translateY(${0}px)`
-        //                 acceleration = 1
-        //                 currentQuote += 1
-        //             }
+                    innerQuotesArray[currentQuoteArray[currentQuote]].style.transform = `translateY(${currentTranslateY + 1 + acceleration}px)`
+                    if (acceleration < 6) {
+                        acceleration = acceleration * 1.02
+                    }
+                    if (currentTranslateY >= 0) {
+                        innerQuotesArray[currentQuoteArray[currentQuote]].style.transform = `translateY(${0}px)`
+                        acceleration = 1
+                        currentQuote += 1
+                    }
 
-        //             if (currentQuote === currentQuoteArray.length && currentTranslateY >= 0) {
+                    if (currentQuote === currentQuoteArray.length && currentTranslateY >= 0) {
 
         innerQuotesArray[0].classList.add("banner_right_top_animation");
         innerQuotesArray[1].classList.add("banner_right_right_animation");
@@ -515,17 +515,17 @@ export const Banner = () => {
         quotesWrapper.classList.add("glow_animation");
         paragraphWrapper.classList.add("glow_animation");
         clearInterval(scrollingId.current);
-        //             }
-        //         } catch (error) {
-        //             console.error(error)
-        //             if (scrollingId.current) { clearInterval(scrollingId.current); }
-        //         }
+                    }
+                } catch (error) {
+                    console.error(error)
+                    if (scrollingId.current) { clearInterval(scrollingId.current); }
+                }
 
-        //     }, 10);
+            }, 10);
 
-        // }
+        }
 
-        // tetris()
+        tetris()
 
     }, [])
     useEffect(() => {
