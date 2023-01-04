@@ -1,22 +1,41 @@
+
+import React, { Suspense, lazy } from 'react';
+
 import './App.css';
 import { NavBar } from './components/NavBar'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Banner } from './components/Banner'
-import { Skills } from "./components/Skills"
-import { Projects } from './components/Projects'
-import { Contact } from './components/Contact';
+// import { Banner } from './components/Banner'
+// import { Skills } from "./components/Skills"
+// import { Projects } from './components/Projects'
+// import { Contact } from './components/Contact';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Analytics } from '@vercel/analytics/react';
+
+const Banner = lazy(() => import('./components/Banner'));
+const Projects = lazy(() => import('./components/Projects'));
+const Skills = lazy(() => import('./components/Skills'));
+const Contact = lazy(() => import('./components/Contact'));
+
+
+// const Banner = React.lazy(() => import('./components/Banner'));
 
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <Banner />
-      <Skills />
-      <Projects />
-      <Contact />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Banner />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Skills />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Projects />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Contact />
+      </Suspense>
       <Analytics />
     </div>
   );

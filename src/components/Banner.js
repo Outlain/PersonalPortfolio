@@ -3,7 +3,7 @@ import axios from 'axios';
 import axiosRetry from "axios-retry";
 
 
-export const Banner = () => {
+export default function Banner() {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const toRotate = ["Full-Stack Developer", "Web Designer", "UX/UI Designer"]
@@ -506,15 +506,15 @@ export const Banner = () => {
 
                     if (currentQuote === currentQuoteArray.length && currentTranslateY >= 0) {
 
-        innerQuotesArray[0].classList.add("banner_right_top_animation");
-        innerQuotesArray[1].classList.add("banner_right_right_animation");
-        innerQuotesArray[2].classList.add("banner_right_left_top_left_animation");
-        innerQuotesArray[3].classList.add("banner_right_left_top_right_animation");
-        innerQuotesArray[4].classList.add("banner_right_left_bottom_top_animation");
-        innerQuotesArray[5].classList.add("banner_right_left_bottom_bottom_animation");
-        quotesWrapper.classList.add("glow_animation");
-        paragraphWrapper.classList.add("glow_animation");
-        clearInterval(scrollingId.current);
+                        innerQuotesArray[0].classList.add("banner_right_top_animation");
+                        innerQuotesArray[1].classList.add("banner_right_right_animation");
+                        innerQuotesArray[2].classList.add("banner_right_left_top_left_animation");
+                        innerQuotesArray[3].classList.add("banner_right_left_top_right_animation");
+                        innerQuotesArray[4].classList.add("banner_right_left_bottom_top_animation");
+                        innerQuotesArray[5].classList.add("banner_right_left_bottom_bottom_animation");
+                        quotesWrapper.classList.add("glow_animation");
+                        paragraphWrapper.classList.add("glow_animation");
+                        clearInterval(scrollingId.current);
                     }
                 } catch (error) {
                     console.error(error)
@@ -566,3 +566,4 @@ export const Banner = () => {
     )
 
 }
+
