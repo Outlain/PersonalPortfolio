@@ -737,6 +737,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 1.5rem;
   overflow: auto;
   text-align: justify;
+  display: flex;
+  
 }
 .project-two {
   height: 10%;

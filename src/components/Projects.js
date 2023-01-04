@@ -98,13 +98,17 @@ export const Projects = () => {
     const [isClicked, setIsClicked] = useState(false);
     const [fixing, setfixing] = useState(false);
     const [fixingP, setFixingP] = useState('');
-    const [differential, setDifferential] = useState(Math.floor(Math.random() * (200 - 80 + 1)) + 80)
+    // const [differential, setDifferential] = useState(Math.floor(Math.random() * (200 - 80 + 1)) + 80)
     const [elementHovered, setElementHovered] = useState(false);
     const [tabChosenGames, setTabChosenGames] = useState(false);
     const [tabChosenDynamic, setTabChosenDynamic] = useState(false);
     const [tabChosenStatic, setTabChosenStatic] = useState(false);
     // const [currentProjectsParagraph, setCurrentProjectsParagraph] = useState('')
-    const projectsParagraph = 'I have completed numerous projects with durations ranging from a few hours to several weeks. These projects have included a wide range of challenges and have allowed me to hone my skills in full-stack development, including back-end technologies such as Node.js, Express, and SQL. My portfolio includes a variety of project types, including interactive mini-games built with platforms such as CANVAS and PyGame, dynamic websites featuring API integration and full CRUD functionality, and a range of static websites.'
+    const projectsParagraph = `As a full-stack developer, I have built a diverse range of projects with various functionalities and challenges. My skills in back-end technologies such as Node.js, Express, and SQL, as well as my experience in building interactive mini-games with platforms like CANVAS and PyGame, are demonstrated in my portfolio. In addition, I have integrated real-time functionality using web sockets and have developed APIs to enhance user experiences.
+    
+    I am adept at creating dynamic websites with full CRUD functionality and API integration, as well as static websites. The duration of these projects has ranged from a few hours to several weeks, allowing me to handle projects of varying scope and complexity.
+    
+    Through my project experience, I have honed my problem-solving skills and developed expertise in full-stack development, web socket integrations, and API development. These skills have enabled me to build innovative web applications and deliver exceptional user experiences.`
 
 
     const handleScrollOver = () => {
@@ -398,19 +402,60 @@ export const Projects = () => {
     const currentProjectsParagraph = useRef(1);
 
 
+    // useEffect(() => {
+    // function randomNumber() {
+    //     const rand = Math.random();
+    //     if (rand <= 0.85) {
+    //         return Math.floor(Math.random() * (90 - 70 + 1)) + 70;
+    //     } else {
+    //         return Math.floor(Math.random() * (200 - 125 + 1)) + 180;
+    //     }
+    // }
+    // function writeParagraph() {
+    //     // console.log('Running')
+    //     clearInterval(paragrpahId.current);
+    //     paragrpahId.current = setInterval(writeParagraph, differential);
+
+    //     if (currentProjectsParagraph.current.length >= projectsParagraph.length) {
+    //         clearInterval(paragrpahId.current);
+    //     }
+    //     setFixingP(projectsParagraph.slice(0, currentProjectPSlice.current))
+    //     currentProjectsParagraph.current = projectsParagraph.slice(0, currentProjectPSlice.current)
+    //     currentProjectPSlice.current = currentProjectPSlice.current + 1
+    //     if (projectsParagraph[currentProjectPSlice.current - 2] === ',' || projectsParagraph[currentProjectPSlice.current - 2] === '.') {
+    //         setDifferential(650)
+    //     } else {
+    //         setDifferential(randomNumber)
+    //     }
+    // }
+
+    // paragrpahId.current = setInterval(writeParagraph, differential);
+
+    //     return () => {
+    //         clearInterval(paragrpahId.current);
+    //     };
+    // }, [differential]);
+
+    const myDivParagraph = useRef(null);
+    // const [differential, setDifferential] = useState(Math.floor(Math.random() * (200 - 80 + 1)) + 80)
+    const differential = useRef(Math.floor(Math.random() * (200 - 80 + 1)) + 80);
+
     useEffect(() => {
         function randomNumber() {
             const rand = Math.random();
             if (rand <= 0.85) {
-              return Math.floor(Math.random() * (90 - 70 + 1)) + 70;
+                return Math.floor(Math.random() * (70 - 50 + 1)) + 70;
             } else {
-              return Math.floor(Math.random() * (200 - 125 + 1)) + 180;
+                return Math.floor(Math.random() * (170 - 115 + 1)) + 180;
             }
-          }
+        }
+        const element = document.getElementById('writing-effect');
+
         function writeParagraph() {
-            // console.log('Running')
+            console.log(differential.current)
+            element.scrollTop = element.scrollHeight;
             clearInterval(paragrpahId.current);
-            paragrpahId.current = setInterval(writeParagraph, differential);
+            paragrpahId.current = setInterval(writeParagraph, differential.current);
 
             if (currentProjectsParagraph.current.length >= projectsParagraph.length) {
                 clearInterval(paragrpahId.current);
@@ -418,26 +463,42 @@ export const Projects = () => {
             setFixingP(projectsParagraph.slice(0, currentProjectPSlice.current))
             currentProjectsParagraph.current = projectsParagraph.slice(0, currentProjectPSlice.current)
             currentProjectPSlice.current = currentProjectPSlice.current + 1
+
             if (projectsParagraph[currentProjectPSlice.current - 2] === ',' || projectsParagraph[currentProjectPSlice.current - 2] === '.') {
-                setDifferential(650)
-            }  else {
-            setDifferential(randomNumber)
+                differential.current = 650;
+            } else {
+                differential.current = randomNumber()
             }
         }
 
-        paragrpahId.current = setInterval(writeParagraph, differential);
+        const currentDiv = myDivParagraph.current
 
+        const observer = new IntersectionObserver(entries => {
+            // Loop through the entries
+            entries.forEach(entry => {
+                // Check if the entry is intersecting (i.e. visible in the viewport)
+                if (entry.isIntersecting) {
+                    // Check if the entry's intersection ratio (i.e. the percentage of the element that is visible in the viewport) is greater than or equal to 0.05 (5%)
+                    if (entry.intersectionRatio >= 0.05) {
+                        // Do something when the div comes into view
+                        //   console.log('Div is in view');
+                        // Add the right-top class to the div element
+                        paragrpahId.current = setInterval(() => {
+                            writeParagraph();
+                        }, differential.current)
+
+                    }
+                }
+            });
+        }, { threshold: 0.02 }); // Set the threshold to 0.05 (5% of the element's area must be visible in the viewport)
+        // Start observing the div
+        observer.observe(currentDiv);
+        // Return a cleanup function to remove the right-top class and disconnect the observer when the component unmounts
         return () => {
-            clearInterval(paragrpahId.current);
+            currentDiv.classList.remove('right-top');
+            observer.disconnect();
         };
-    }, [differential]);
-
-    // useEffect(() => {
-    //     if (currentProjectsParagraph.length > projectsParagraph.lengh) {
-    //         return clearInterval(paragrpahId.current);
-    //     }
-    //     console.log(fixingP)
-    // }, [fixingP]);
+    }, []); // The empty array ensures that the effect is only run once, when the component mounts
 
 
     return (
@@ -445,7 +506,7 @@ export const Projects = () => {
             <div className="dimmer2">
                 <section className="project-one">
                     <h1>Projects</h1>
-                    <p>
+                    <p ref={myDivParagraph} id='writing-effect'>
                         {fixingP}
                     </p>
                 </section>
