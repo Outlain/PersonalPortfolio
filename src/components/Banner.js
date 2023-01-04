@@ -23,7 +23,7 @@ export default function Banner() {
         axiosRetry(axios, {
             retries: 10,
             retryDelay: (retryCount) => {
-                return retryCount * 2000;
+                return retryCount * 1000;
             }
         }); // retry the request up to 10 times, with a 1 second delay between each retry
 
@@ -80,7 +80,7 @@ export default function Banner() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [text])
 
-    const scrollingId = useRef(false);
+    const scrollingBannerId = useRef(false);
 
 
     useEffect(() => {
@@ -475,19 +475,19 @@ export default function Banner() {
 
         // console.log(innerQuotesArray[1])
         function tetris() {
-            clearInterval(scrollingId.current);
+            clearInterval(scrollingBannerId.current);
 
-            if (scrollingId.current) {
-                clearInterval(scrollingId.current);
+            if (scrollingBannerId.current) {
+                clearInterval(scrollingBannerId.current);
             }
             var currentQuote = 0
             var acceleration = 1
 
             const currentQuoteArray = [1, 5, 4, 3, 2, 0]
-            if (scrollingId.current) { clearInterval(scrollingId.current); }
-            scrollingId.current = setInterval(() => {
+            if (scrollingBannerId.current) { clearInterval(scrollingBannerId.current); }
+            scrollingBannerId.current = setInterval(() => {
                 try {
-                    console.log('Running')
+                    // console.log('Running Banner')
                     const currentTransform = innerQuotesArray[currentQuoteArray[currentQuote]].style.transform;
                     // console.log(currentTransform)
                     const currentTranslateY = parseInt(
@@ -514,11 +514,11 @@ export default function Banner() {
                         innerQuotesArray[5].classList.add("banner_right_left_bottom_bottom_animation");
                         quotesWrapper.classList.add("glow_animation");
                         paragraphWrapper.classList.add("glow_animation");
-                        clearInterval(scrollingId.current);
+                        clearInterval(scrollingBannerId.current);
                     }
                 } catch (error) {
                     console.error(error)
-                    if (scrollingId.current) { clearInterval(scrollingId.current); }
+                    if (scrollingBannerId.current) { clearInterval(scrollingBannerId.current); }
                 }
 
             }, 10);
@@ -536,7 +536,7 @@ export default function Banner() {
 
     }, [styling])
 
-    
+
 
     return (
 

@@ -86,7 +86,7 @@ export const Skills = () => {
                     }
                 }
             });
-        }, { threshold: 0.05 }); // Set the threshold to 0.05 (5% of the element's area must be visible in the viewport)
+        }, { threshold: 0.02 }); // Set the threshold to 0.05 (5% of the element's area must be visible in the viewport)
         // Start observing the div
         observer.observe(currentDiv);
         // Return a cleanup function to remove the right-top class and disconnect the observer when the component unmounts

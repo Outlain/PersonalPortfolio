@@ -97,11 +97,14 @@ export const Projects = () => {
     const [allClicked, setAllClicked] = useState("not-all-clicked project-two");
     const [isClicked, setIsClicked] = useState(false);
     const [fixing, setfixing] = useState(false);
+    const [fixingP, setFixingP] = useState('');
+    const [differential, setDifferential] = useState(Math.floor(Math.random() * (200 - 80 + 1)) + 80)
     const [elementHovered, setElementHovered] = useState(false);
     const [tabChosenGames, setTabChosenGames] = useState(false);
     const [tabChosenDynamic, setTabChosenDynamic] = useState(false);
     const [tabChosenStatic, setTabChosenStatic] = useState(false);
-
+    // const [currentProjectsParagraph, setCurrentProjectsParagraph] = useState('')
+    const projectsParagraph = 'I have completed numerous projects with durations ranging from a few hours to several weeks. These projects have included a wide range of challenges and have allowed me to hone my skills in full-stack development, including back-end technologies such as Node.js, Express, and SQL. My portfolio includes a variety of project types, including interactive mini-games built with platforms such as CANVAS and PyGame, dynamic websites featuring API integration and full CRUD functionality, and a range of static websites.'
 
 
     const handleScrollOver = () => {
@@ -390,16 +393,60 @@ export const Projects = () => {
         ));
     }, [projectType]);
 
+    const paragrpahId = useRef(null);
+    const currentProjectPSlice = useRef(1);
+    const currentProjectsParagraph = useRef(1);
 
 
-    // console.log(scrollingId.current);
+    useEffect(() => {
+        function randomNumber() {
+            const rand = Math.random();
+            if (rand <= 0.85) {
+              return Math.floor(Math.random() * (90 - 70 + 1)) + 70;
+            } else {
+              return Math.floor(Math.random() * (200 - 125 + 1)) + 180;
+            }
+          }
+        function writeParagraph() {
+            // console.log('Running')
+            clearInterval(paragrpahId.current);
+            paragrpahId.current = setInterval(writeParagraph, differential);
+
+            if (currentProjectsParagraph.current.length >= projectsParagraph.length) {
+                clearInterval(paragrpahId.current);
+            }
+            setFixingP(projectsParagraph.slice(0, currentProjectPSlice.current))
+            currentProjectsParagraph.current = projectsParagraph.slice(0, currentProjectPSlice.current)
+            currentProjectPSlice.current = currentProjectPSlice.current + 1
+            if (projectsParagraph[currentProjectPSlice.current - 2] === ',' || projectsParagraph[currentProjectPSlice.current - 2] === '.') {
+                setDifferential(650)
+            }  else {
+            setDifferential(randomNumber)
+            }
+        }
+
+        paragrpahId.current = setInterval(writeParagraph, differential);
+
+        return () => {
+            clearInterval(paragrpahId.current);
+        };
+    }, [differential]);
+
+    // useEffect(() => {
+    //     if (currentProjectsParagraph.length > projectsParagraph.lengh) {
+    //         return clearInterval(paragrpahId.current);
+    //     }
+    //     console.log(fixingP)
+    // }, [fixingP]);
+
+
     return (
         <section id="projects">
             <div className="dimmer2">
                 <section className="project-one">
                     <h1>Projects</h1>
                     <p>
-                    I have completed numerous projects with durations ranging from a few hours to several weeks. These projects have included a wide range of challenges and have allowed me to hone my skills in full-stack development, including back-end technologies such as Node.js, Express, and SQL. My portfolio includes a variety of project types, including interactive mini-games built with platforms such as CANVAS and PyGame, dynamic websites featuring API integration and full CRUD functionality, and a range of static websites.
+                        {fixingP}
                     </p>
                 </section>
                 <section className={allClicked}>

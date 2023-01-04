@@ -24,16 +24,16 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div className='loading'></div>}>
         <Banner />
       </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div className='loading'></div>}>
         <Skills />
       </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div className='loading'></div>}>
         <Projects />
       </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div className='loading'></div>}>
         <Contact />
       </Suspense>
       <Analytics />
