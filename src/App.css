@@ -326,6 +326,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 8px 10px;
   background: rgba(148, 121, 102, 0.4);
   border: 0.05rem solid white;
+  box-shadow: 0 0 3px rgba(179, 138, 116, 1), 0 0 6px rgba(179, 138, 116, 1), 0 0 19px rgba(179, 138, 116, 1), 0 0 64px rgba(179, 138, 116, 1);
   /* backdrop-filter: invert(80%) brightness(80%); */
 }
 .banner-left-top h1 {
@@ -1006,6 +1007,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     "16 17 18 19";
   grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr;
   grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr;
+}
+@keyframes spinning-to-right-outer {
+  from {
+    transform: rotate(0deg) scale(0.1);
+  }
+  to {
+    transform: rotate(360deg) scale(1.1);
+  }
+}
+.skills-spinning-wheel {
+  animation: 1s ease-in 1 spinning-to-right-outer;
+}
+.banner-left-bottom {
+  animation: 1s ease-in 1 spinning-to-right-outer;
 }
 /* @keyframes spinning-to-left-one {
   0% {

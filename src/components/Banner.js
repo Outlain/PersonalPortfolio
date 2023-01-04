@@ -98,7 +98,7 @@ export default function Banner() {
         // console.log(innerQuotesArray)
         const webpageWidth = document.documentElement.clientWidth;
         // console.log(webpageWidth)
-        if (webpageWidth >= 1500 && webpageWidth <= 1810) {
+        if (webpageWidth >= 1500 && webpageWidth <= 1580) {
             setStyling(
                 `
         @keyframes right_top {
@@ -242,10 +242,10 @@ export default function Banner() {
             }
             @keyframes glow {
                 0% {
-                    border: solid 0.1rem #b38a74;
+                    box-shadow: 0 0 3px rgba(179, 138, 116, 0.5), 0 0 6px rgba(179, 138, 116, 0.5), 0 0 30px rgba(179, 138, 116, 0.5), 0 0 80px rgba(179, 138, 116, 0.5);
                 }
                 1% {
-                    border: none;
+                    box-shadow: none;
 
                 }
                 45% {
@@ -254,11 +254,11 @@ export default function Banner() {
                 70% {
                 }
                 71% {
-                    border: solid 0.1rem #b38a74;
+                    box-shadow: 0 0 3px rgba(179, 138, 116, 0.5), 0 0 6px rgba(179, 138, 116, 0.5), 0 0 30px rgba(179, 138, 116, 0.5), 0 0 80px rgba(179, 138, 116, 0.5);
 
                 }
                 100%{
-                    border: solid 0.1rem #b38a74;
+                    box-shadow: 0 0 3px rgba(179, 138, 116, 0.5), 0 0 6px rgba(179, 138, 116, 0.5), 0 0 30px rgba(179, 138, 116, 0.5), 0 0 80px rgba(179, 138, 116, 0.5);
 
                 }
             }
@@ -426,10 +426,10 @@ export default function Banner() {
          }
          @keyframes glow {
             0% {
-                box-shadow: 0 0 3px #b38a74, 0 0 6px #b38a74, 0 0 19px #b38a74, 0 0 64px #b38a74;
+                box-shadow: 0 0 3px rgba(179, 138, 116, 0.5), 0 0 6px rgba(179, 138, 116, 0.5), 0 0 30px rgba(179, 138, 116, 0.5), 0 0 80px rgba(179, 138, 116, 0.5);
             }
             39% {
-                box-shadow: 0 0 3px #b38a74, 0 0 6px #b38a74, 0 0 19px #b38a74, 0 0 64px #b38a74;
+                box-shadow: 0 0 3px rgba(179, 138, 116, 0.5), 0 0 6px rgba(179, 138, 116, 0.5), 0 0 30px rgba(179, 138, 116, 0.5), 0 0 80px rgba(179, 138, 116, 0.5);
             }
             40% {
                 border: none;
@@ -440,7 +440,7 @@ export default function Banner() {
                 box-shadow: none;
             }
             50% {
-                box-shadow: 0 0 3px #b38a74, 0 0 6px #b38a74, 0 0 19px #b38a74, 0 0 64px #b38a74;
+                box-shadow: 0 0 3px rgba(179, 138, 116, 0.5), 0 0 6px rgba(179, 138, 116, 0.5), 0 0 30px rgba(179, 138, 116, 0.5), 0 0 80px rgba(179, 138, 116, 0.5);
             }
             51% {
                 border: none;
@@ -452,10 +452,10 @@ export default function Banner() {
             }
 
             66% {
-                box-shadow: 0 0 3px #b38a74, 0 0 6px #b38a74, 0 0 19px #b38a74, 0 0 64px #b38a74;
+                box-shadow: 0 0 3px rgba(179, 138, 116, 0.5), 0 0 6px rgba(179, 138, 116, 0.5), 0 0 30px rgba(179, 138, 116, 0.5), 0 0 80px rgba(179, 138, 116, 0.5);
             }
             100%{
-                box-shadow: 0 0 3px #b38a74, 0 0 6px #b38a74, 0 0 19px #b38a74, 0 0 64px #b38a74;
+                box-shadow: 0 0 3px rgba(179, 138, 116, 0.5), 0 0 6px rgba(179, 138, 116, 0.5), 0 0 30px rgba(179, 138, 116, 0.5), 0 0 80px rgba(179, 138, 116, 0.5);
             }
         }
           
