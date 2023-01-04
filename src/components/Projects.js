@@ -98,17 +98,19 @@ export const Projects = () => {
     const [isClicked, setIsClicked] = useState(false);
     const [fixing, setfixing] = useState(false);
     const [fixingP, setFixingP] = useState('');
-    // const [differential, setDifferential] = useState(Math.floor(Math.random() * (200 - 80 + 1)) + 80)
     const [elementHovered, setElementHovered] = useState(false);
     const [tabChosenGames, setTabChosenGames] = useState(false);
     const [tabChosenDynamic, setTabChosenDynamic] = useState(false);
     const [tabChosenStatic, setTabChosenStatic] = useState(false);
     // const [currentProjectsParagraph, setCurrentProjectsParagraph] = useState('')
-    const projectsParagraph = `As a full-stack developer, I have built a diverse range of projects with various functionalities and challenges. My skills in back-end technologies such as Node.js, Express, and SQL, as well as my experience in building interactive mini-games with platforms like CANVAS and PyGame, are demonstrated in my portfolio. In addition, I have integrated real-time functionality using web sockets and have developed APIs to enhance user experiences.
-    
-    I am adept at creating dynamic websites with full CRUD functionality and API integration, as well as static websites. The duration of these projects has ranged from a few hours to several weeks, allowing me to handle projects of varying scope and complexity.
-    
+    const projectsParagraph = `As a full-stack developer, I have built a diverse range of projects with various functionalities and challenges. My skills in back-end technologies such as Node.js, Express, and SQL, as well as my experience in building interactive mini-games with platforms like CANVAS and PyGame, are demonstrated in my portfolio.<br><br>
+
+    In addition, I have integrated real-time functionality using web sockets and have developed APIs to enhance user experiences.<br><br>
+
+    I am adept at creating dynamic websites with full CRUD functionality and API integration, as well as static websites. The duration of these projects has ranged from a few hours to several weeks, allowing me to handle projects of varying scope and complexity.<br><br>
+
     Through my project experience, I have honed my problem-solving skills and developed expertise in full-stack development, web socket integrations, and API development. These skills have enabled me to build innovative web applications and deliver exceptional user experiences.`
+
 
 
     const handleScrollOver = () => {
@@ -438,15 +440,15 @@ export const Projects = () => {
 
     const myDivParagraph = useRef(null);
     // const [differential, setDifferential] = useState(Math.floor(Math.random() * (200 - 80 + 1)) + 80)
-    const differential = useRef(Math.floor(Math.random() * (200 - 80 + 1)) + 80);
+    const differential = useRef(Math.floor(Math.random() * (55 - 25 + 1)) + 30);
 
     useEffect(() => {
         function randomNumber() {
             const rand = Math.random();
             if (rand <= 0.85) {
-                return Math.floor(Math.random() * (70 - 50 + 1)) + 70;
+                return Math.floor(Math.random() * (55 - 25 + 1)) + 30;
             } else {
-                return Math.floor(Math.random() * (170 - 115 + 1)) + 180;
+                return Math.floor(Math.random() * (150 - 109 + 1)) + 90;
             }
         }
         const element = document.getElementById('writing-effect');
@@ -463,9 +465,11 @@ export const Projects = () => {
             setFixingP(projectsParagraph.slice(0, currentProjectPSlice.current))
             currentProjectsParagraph.current = projectsParagraph.slice(0, currentProjectPSlice.current)
             currentProjectPSlice.current = currentProjectPSlice.current + 1
-
+            if (projectsParagraph[currentProjectPSlice.current - 1] === '<') {
+                differential.current = 1;
+            }
             if (projectsParagraph[currentProjectPSlice.current - 2] === ',' || projectsParagraph[currentProjectPSlice.current - 2] === '.') {
-                differential.current = 650;
+                differential.current = 450;
             } else {
                 differential.current = randomNumber()
             }
@@ -506,9 +510,8 @@ export const Projects = () => {
             <div className="dimmer2">
                 <section className="project-one">
                     <h1>Projects</h1>
-                    <p ref={myDivParagraph} id='writing-effect'>
-                        {fixingP}
-                    </p>
+                    <p id="writing-effect" ref={myDivParagraph} dangerouslySetInnerHTML={{ __html: fixingP }}></p>
+
                 </section>
                 <section className={allClicked}>
                     <button
