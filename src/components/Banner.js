@@ -536,7 +536,7 @@ export default function Banner() {
 
     }, [styling])
 
-
+    
 
     return (
 

@@ -1016,10 +1016,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     transform: rotate(360deg) scale(1.1);
   }
 }
-.skills-spinning-wheel {
+.banner-left-bottom {
   animation: 1s ease-in 1 spinning-to-right-outer;
 }
-.banner-left-bottom {
+.spinning_into_view_animation {
   animation: 1s ease-in 1 spinning-to-right-outer;
 }
 /* @keyframes spinning-to-left-one {

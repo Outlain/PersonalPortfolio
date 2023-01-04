@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 
 // import stars from "../assets/img/skills-backgroundv4.webp"
 import stars from "../assets/img/skills-backgroundv42.png"
@@ -52,7 +52,49 @@ export const Skills = () => {
             setBreaking(<br />)
         }
     }, [])
+    // Create a ref to store a reference to the div element
 
+    // Use the useEffect hook to set up the IntersectionObserver when the component mounts
+    // Create a ref to store a reference to the div element
+    const myDiv = useRef(null);
+    // Create a new IntersectionObserver
+
+    // Use the useEffect hook to start observing the div when the component mounts
+    useEffect(() => {
+
+        const currentDiv = myDiv.current
+
+        const observer = new IntersectionObserver(entries => {
+            // Loop through the entries
+            entries.forEach(entry => {
+                // Check if the entry is intersecting (i.e. visible in the viewport)
+                if (entry.isIntersecting) {
+                    // Check if the entry's intersection ratio (i.e. the percentage of the element that is visible in the viewport) is greater than or equal to 0.05 (5%)
+                    if (entry.intersectionRatio >= 0.05) {
+                        // Do something when the div comes into view
+                        //   console.log('Div is in view');
+                        // Add the right-top class to the div element
+                        currentDiv.classList.add('spinning_into_view_animation');
+                    }
+                } else {
+                    // Do something when the div moves out of view
+                    // console.log('Div is out of view');
+                    // Check if the entry's intersection ratio is 0 (i.e. the element is completely out of view)
+                    if (entry.intersectionRatio === 0) {
+                        // Remove the right-top class from the div element
+                        currentDiv.classList.remove('spinning_into_view_animation');
+                    }
+                }
+            });
+        }, { threshold: 0.05 }); // Set the threshold to 0.05 (5% of the element's area must be visible in the viewport)
+        // Start observing the div
+        observer.observe(currentDiv);
+        // Return a cleanup function to remove the right-top class and disconnect the observer when the component unmounts
+        return () => {
+            currentDiv.classList.remove('right-top');
+            observer.disconnect();
+        };
+    }, []); // The empty array ensures that the effect is only run once, when the component mounts
 
     return (
         <section
@@ -66,7 +108,7 @@ export const Skills = () => {
                 </div>
                 <div className="skills-left-bottom">
                     <div className="skills-spinning">
-                        <div className="skills-spinning-wheel">
+                        <div ref={myDiv} className="skills-spinning-wheel">
                             <div className="skills-spinning-wheel-inner">
                                 {
                                     skillsIcons.map((x, index) => {
