@@ -486,7 +486,7 @@ export const Projects = () => {
                     if (entry.intersectionRatio >= 0.05) {
                         // Do something when the div comes into view
                         //   console.log('Div is in view');
-                        // Add the right-top class to the div element
+                        clearInterval(paragrpahId.current);
                         paragrpahId.current = setInterval(() => {
                             writeParagraph();
                         }, differential.current)
@@ -497,9 +497,9 @@ export const Projects = () => {
         }, { threshold: 0.02 }); // Set the threshold to 0.05 (5% of the element's area must be visible in the viewport)
         // Start observing the div
         observer.observe(currentDiv);
-        // Return a cleanup function to remove the right-top class and disconnect the observer when the component unmounts
+        // Return a cleanup function to clearInterval and disconnect the observer when the component unmounts
         return () => {
-            currentDiv.classList.remove('right-top');
+            clearInterval(paragrpahId.current);
             observer.disconnect();
         };
     }, []); // The empty array ensures that the effect is only run once, when the component mounts
