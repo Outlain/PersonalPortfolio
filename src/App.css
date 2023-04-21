@@ -321,6 +321,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
 }
 .banner .tagline {
+  font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
@@ -679,9 +680,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     /* height: 100%; */
     /* border: 0.02rem solid rgba(255, 255, 255, 0.5); */
   }
-  /* .tagline {
-    visibility: hidden;
-  } */
+  .banner .tagline {
+    font-size: 1.5rem;
+  }
   .logo-resize {
     height: 3.5rem;
     top: 0vh;
