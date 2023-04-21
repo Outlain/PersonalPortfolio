@@ -544,6 +544,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   box-shadow: 0 0 5px rgba(179, 138, 116, 0.8), 0 0 8px rgba(179, 138, 116, 0.8),
     0 0 39px rgba(179, 138, 116, 0.8), 0 0 104px rgba(179, 138, 116, 0.8);
   color: white;
+  border: 0.15rem solid lightgray;
 }
 @media screen and (max-width: 1100px) {
   .dimmer {
