@@ -95,7 +95,19 @@ export default function Banner() {
         const realQuotesWrapperWidth = document.querySelector('.banner-right').offsetWidth
         const squareHeight = realQuotesWrapperHeight / 6
         const squareWidth = realQuotesWrapperWidth / 3
-        // console.log(innerQuotesArray)
+        // console.log(innerQuotesArray[0])
+
+
+        for (let i = 0; i < innerQuotesArray.length; i++) {
+            innerQuotesArray[i].addEventListener("mouseover", () => {
+              innerQuotesArray[i].setAttribute("id", "extra-glow");
+            });
+            innerQuotesArray[i].addEventListener("mouseout", () => {
+              innerQuotesArray[i].removeAttribute("id");
+            });
+          }
+
+
         const webpageWidth = document.documentElement.clientWidth;
         // console.log(webpageWidth)
         if (webpageWidth >= 1500 && webpageWidth <= 1580) {

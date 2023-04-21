@@ -454,7 +454,7 @@ export const Projects = () => {
         const element = document.getElementById('writing-effect');
 
         function writeParagraph() {
-            console.log(differential.current)
+            // console.log(differential.current)
             element.scrollTop = element.scrollHeight;
             clearInterval(paragrpahId.current);
             paragrpahId.current = setInterval(writeParagraph, differential.current);
