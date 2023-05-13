@@ -100,12 +100,12 @@ export default function Banner() {
 
         for (let i = 0; i < innerQuotesArray.length; i++) {
             innerQuotesArray[i].addEventListener("mouseover", () => {
-              innerQuotesArray[i].setAttribute("id", "extra-glow");
+                innerQuotesArray[i].setAttribute("id", "extra-glow");
             });
             innerQuotesArray[i].addEventListener("mouseout", () => {
-              innerQuotesArray[i].removeAttribute("id");
+                innerQuotesArray[i].removeAttribute("id");
             });
-          }
+        }
 
 
         const webpageWidth = document.documentElement.clientWidth;
@@ -563,7 +563,7 @@ export default function Banner() {
                     <h1 className="wrap">{text}</h1>
                 </div>
                 <div className="banner-left-bottom">
-                    <h5> I am a full-stack web developer with expertise in JavaScript, HTML, CSS, React, Node.js, and SQL. I have experience building scalable and secure RESTful APIs and responsive web applications. I am passionate about staying up-to-date on the latest technologies and am excited to bring my skills and enthusiasm to your team as we work on innovative and engaging web applications.</h5>
+                    <h5> I am a full-stack web developer with expertise in React.js, JavaScript, HTML5, CSS3, MongoDB, MySQL and Wordpress. I graduated from IronHack Miami in 2022 and have many websites and projects I have built from the ground up, as well as industry experience (In React.js and mySQL). I am looking forward to working on many future innovative and engaging web applications.</h5>
                 </div>
                 <div className="banner-right">
                     <h6 className="banner-right-top" >{quotes ? quotes[0].quote : ''} <br /> {quotes ? quotes[0].author : ''}</h6>
