@@ -46,9 +46,7 @@ export const Contact = () => {
     return (
         <section className="contact" id="connect">
             <div className="connect-dimer">
-                <div className="connect-left">
-                    <img src={contactImg} alt="Contact Me" />
-                </div>
+
                 <div className="connect-right">
                     <h2>Get in touch</h2>
                     <form onSubmit={handleSubmit}>

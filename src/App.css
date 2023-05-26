@@ -293,7 +293,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-image: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0) 75%,
     rgba(0, 0, 0, 0.5)
   );
   /* opacity: 0.5; */
@@ -721,9 +722,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 100vh;
   background-image: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.9),
-    rgba(0, 0, 0, 0.2) 50%,
-    rgba(0, 0, 0, 0.7)
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(0, 0, 0, 0.9)
   );
   display: flex;
   flex-direction: column;
@@ -933,9 +935,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* background-color: rgba(0, 0, 0, 0.6); */
   background: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.2) 50%,
-    rgba(0, 0, 0, 0.8)
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0) 80%,
+    rgba(0, 0, 0, 0.9)
   );
   display: grid;
   /* gap: 1rem; */
@@ -1354,39 +1357,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
   background-image: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.2) 50%,
-    rgba(0, 0, 0, 0.7)
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(0, 0, 0, 0.8)
   );
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: 1.7fr 2fr;
-  grid-template-rows: 1fr;
-  gap: 1rem;
-  box-sizing: border-box;
-}
-.connect-left {
-  box-sizing: border-box;
-  height: 100%;
-  width: 100%;
-  /* background-color: red; */
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
-.connect-left img {
-  height: 80%;
-  width: 60%;
-}
+
 .connect-right {
   height: 90%;
-  width: 80%;
+  width: 55%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  color: rgb(81, 107, 157);
+  color: rgb(173, 185, 209);
   box-sizing: border-box;
 }
 .connect-right form {
@@ -1399,9 +1388,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   justify-content: space-around;
   align-items: center;
   padding: 0.5rem;
-  border: 0.2rem solid white;
-  background-color: rgba(106, 125, 160, 0.5);
-  border: solid 0.5rem rgba(81, 107, 157, 0.8);
+  background-color: rgba(153, 159, 169, 0.5);
+  border: solid 0.5rem rgba(218, 222, 230, 0.8);
 }
 .connect-right form:hover {
   transform: scale(1.1) translateY(-10%);
@@ -1418,7 +1406,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 #connect span {
   height: 100%;
   width: 100%;
-  color: #a28e6b;
+  color: black;
 }
 #connect span:hover {
   transform: scale(1.01) translateY(-5%);
@@ -1426,19 +1414,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 #connect span input {
   height: 100%;
   width: 100%;
-  background-color: rgba(106, 125, 160, 0.1);
-  color: #a28e6b;
+  background-color: rgba(233, 236, 240, 1);
+  color: black;
 }
 #connect textarea {
   height: 100%;
   width: 100%;
-  background-color: rgba(106, 125, 160, 0.1);
+  background-color: rgba(233, 236, 240, 1);
 }
 #connect button {
   height: 100%;
   width: 100%;
   background-color: rgba(106, 125, 160, 0.1);
-  color: #a28e6b;
+  color: black;
 }
 #connect button:hover {
   background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
