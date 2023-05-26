@@ -23,9 +23,18 @@ export default function Banner() {
         axiosRetry(axios, {
             retries: 10,
             retryDelay: (retryCount) => {
-                return retryCount * 1000;
+                // For the first 5 retries, the delay is a constant 0.5s.
+                // For the next 5 retries, the delay increases by 1s per attempt, starting at 1s.
+                // For the final 5 retries, the delay is a constant 5s.
+                if (retryCount <= 5) {
+                    return 500;
+                } else if (retryCount <= 10) {
+                    return (retryCount - 5) * 1000;
+                } else {
+                    return 5000;
+                }
             }
-        }); // retry the request up to 10 times, with a 1 second delay between each retry
+        });
 
         axios.request(optionsBackUp).then(function (response) {
             SetQuotes(response.data)
