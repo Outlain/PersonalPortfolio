@@ -958,7 +958,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skills-left-middle h1 {
   padding: 1.5rem;
   backdrop-filter: invert(100%);
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(193, 178, 152, 0.4);
   color: rgb(44, 48, 51);
   border: solid white;
   border-radius: 15px;
@@ -1216,7 +1216,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 30%;
   /* border: 0.05rem solid rgb(0, 0, 0); */
   backdrop-filter: invert(100%);
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(193, 178, 152, 0.4);
   /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, */
   /* 1px 1px 0 #000; */
   color: rgb(44, 48, 51);
