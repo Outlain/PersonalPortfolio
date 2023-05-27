@@ -34,12 +34,12 @@ export const Projects = () => {
     ];
     const fullStackWebsite = [
         {
-            title: "Crypto Real Time Version 2 - (in Porgress)",
+            title: "Crypto Real Time Version 2",
             description:
                 "Three pages crypto Website with realtime crypto data that auto updates prices and charts",
             imgUrl: cryptoV2,
             link: "https://crypto-website-v2.vercel.app/",
-            beta: true,
+            beta: false,
         },
         {
             title: "Crypto API",
