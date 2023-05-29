@@ -1336,6 +1336,35 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     font-size: 1rem;
   }
 }
+@media screen and (max-width: 750px) {
+  .dimmer-skills {
+    grid-template-rows:
+      minmax(0, 1fr) minmax(0, 3fr) minmax(0, 18fr) minmax(0, 3fr)
+      minmax(0, 1fr);
+    gap: 2vh;
+  }
+  .skills-left-bottom {
+    flex-direction: column;
+  }
+  .skills-spinning {
+    width: 70%;
+    height: 50%;
+  }
+  .skills-spinning-wheel-inner {
+    height: 50%;
+    width: 50%;
+  }
+  .skills-spinning-inner-inner {
+    height: 10%;
+    width: 75%;
+  }
+  .skills-paragraph-main {
+    width: 70%;
+    height: 50%;
+  }
+  .skills-left-middle {
+  }
+}
 @media screen and (max-width: 500px) {
   .skills-paragraph-inner h4 {
     font-size: 0.8rem;
