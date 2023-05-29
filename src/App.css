@@ -655,6 +655,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 @media screen and (max-width: 750px) {
+  /* .dimmer {
+    background-image: none;
+    background-color: rgb(118, 80, 135);
+  } */
   .project-three {
     height: 55%;
     width: 90% !important;
@@ -672,14 +676,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     min-width: 60% !important;
   }
   #home {
-    height: 150vh;
+    height: 100vh;
     width: 100vw;
   }
   .dimmer {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows:
       minmax(0, 1fr) minmax(0, 2fr) minmax(0, 0.5fr) minmax(0, 6fr)
-      minmax(0, 13fr);
+      minmax(0, 6fr);
   }
   .banner-left-bottom h5 {
     width: 90%;
@@ -701,8 +705,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     height: 100%;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: repeat(6, minmax(0, 1fr));
+    grid-template-rows:
+      minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
+      minmax(0, 2fr) minmax(0, 2fr);
     overflow: visible;
+  }
+  .banner-right h6::before {
+    content: "";
   }
 }
 
@@ -1376,6 +1385,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     /* background-color: red; */
     height: 47%;
     width: 80%;
+  }
+  .skills-left-middle h1 {
+    padding: 1.3vh;
+    width: 90%;
+    font-size: 2.3vh;
+  }
+  .skills-resume button {
+    height: 70%;
+  }
+  .skills-spinning-wheel-inner {
+    height: 65%;
+    width: 65%;
   }
 }
 /* CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  */
