@@ -577,6 +577,9 @@ nav > div > div > a {
   background: rgba(9, 13, 20, 0.43);
   border: 1px solid white;
   font-weight: 400;
+  z-index: 10;
+  overflow: auto;
+  line-height: normal;
 }
 /* @media screen and (max-width: 1300px) {
   @keyframes heading {
