@@ -574,7 +574,8 @@ nav > div > div > a {
   /* backdrop-filter: blur(3px); */
   border-radius: 30px;
   /* animation: heading 7s linear infinite; */
-  background: rgba(9, 13, 20, 0.83);
+  background: rgba(9, 13, 20, 0.43);
+  border: 1px solid white;
   font-weight: 400;
 }
 /* @media screen and (max-width: 1300px) {
@@ -610,7 +611,7 @@ nav > div > div > a {
   position: relative;
 }
 .banner-right h6 {
-  background: rgba(148, 121, 102, 0.1);
+  background: transparent;
   color: #9eb9cb;
   margin: 0;
   padding: 1rem;
@@ -632,7 +633,7 @@ nav > div > div > a {
   /* color:#804f30 */
 }
 .banner-right h6:nth-child(even) {
-  backdrop-filter: invert(100%) brightness(65%);
+  /* backdrop-filter: invert(100%) brightness(65%); */
   color: rgb(80, 54, 36);
 }
 .banner-right h6:nth-child(odd) {
