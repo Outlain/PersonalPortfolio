@@ -12,6 +12,7 @@ export default function Banner() {
     const period = 500;
     const [quotes, SetQuotes] = useState(null);
     const [styling, setStyling] = useState('something')
+    const [offset, setOffset] = useState()
 
     useEffect(() => {
 
@@ -484,15 +485,21 @@ export default function Banner() {
             )
         }
 
-
+        if (webpageWidth <= 750) {
+            setOffset(3)
+        } else {
+            setOffset(5)
+        }
         // SET INDIVIDUAL Y TRANSLATE HEIGHTS SO EACH ELEMENT HAS ITS CORERCT HIGHT TRANSLATION TO PUT IT RIGHT ABOVE THE PAGE
-        innerQuotesArray[0].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight * 5}px)`;
-        innerQuotesArray[1].style.transform = `translateY(${-quotesWrapperHeight}px)`;
-        innerQuotesArray[2].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight * 2}px)`;
-        innerQuotesArray[3].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight * 2}px)`;
-        innerQuotesArray[5].style.transform = `translateY(${-quotesWrapperHeight}px)`;
-        innerQuotesArray[4].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight}px)`;
 
+        if (offset) {
+            innerQuotesArray[0].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight * offset}px)`;
+            innerQuotesArray[1].style.transform = `translateY(${-quotesWrapperHeight}px)`;
+            innerQuotesArray[2].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight * 2}px)`;
+            innerQuotesArray[3].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight * 2}px)`;
+            innerQuotesArray[5].style.transform = `translateY(${-quotesWrapperHeight}px)`;
+            innerQuotesArray[4].style.transform = `translateY(${-quotesWrapperHeight + innerQuotesHeight}px)`;
+        }
 
         // console.log(innerQuotesArray[1])
         function tetris() {
@@ -548,7 +555,8 @@ export default function Banner() {
 
         tetris()
 
-    }, [])
+    }, [offset])
+
     useEffect(() => {
         const style = document.createElement('style');
         style.innerHTML = `${styling}`
