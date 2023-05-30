@@ -71,7 +71,7 @@ h1 {
 }
 
 /************ Navbar ************/
-nav.navbar {
+/* nav.navbar {
   padding: 18px 0;
   position: fixed;
   width: 100%;
@@ -229,10 +229,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 #basic-navbar-nav {
   flex-grow: 0;
   /* padding-right: 5rem; */
-  /* background-color: red; */
-  height: 100%;
-}
-.me-auto {
+/* background-color: red; */
+/* height: 100%;
+} */
+/* .me-auto {
   height: 100%;
 }
 .navbar-nav {
@@ -252,9 +252,163 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     height: 6rem;
     top: 0vh;
   }
+} */
+/* CSS */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 99vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px white solid;
+  box-sizing: border-box;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+.scrolled {
+  background: linear-gradient(
+    90deg,
+    rgba(32, 32, 57, 1) 0%,
+    rgba(32, 32, 57, 0.5) 25%,
+    rgba(32, 32, 57, 1) 50%,
+    rgba(32, 32, 57, 0.5) 75%,
+    rgba(32, 32, 57, 1) 100%
+  );
+  background-size: 500% 500%;
+  animation: gradient 15s linear infinite;
+  border-bottom: none;
+}
+nav > div {
+  display: flex;
+  height: 100%;
+  width: 80%;
+  /* background-color: rgba(89, 89, 165, 1); */
+}
+nav > div > a {
+  width: 15%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-resize {
+  height: 70%;
+  width: auto;
+  border-radius: 99px;
+  position: relative;
+}
+
+nav > div > div {
+  flex-grow: 10;
+  display: flex;
+  /* background-color: red; */
+  justify-content: space-around; /* This will distribute the space between the links evenly */
+}
+.navbar-toggle-icon {
+  flex-grow: 1;
+  /* Style as needed, this is just a placeholder */
+  height: 100%;
+  background-color: transparent;
+  /* background-color: red; */
+}
+.navbar-link {
+  color: white; /* White link color */
+  text-decoration: none; /* Remove underline */
+}
+.navbar-link.active {
+  color: yellow; /* Active link color */
+}
+
+nav > div > div > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  font-size: 1.4rem;
+  font-weight: 430;
+}
+.button {
+  display: relative;
+  flex-grow: 2;
+  text-decoration: none;
+}
+.vvd {
+  background-color: transparent;
+  width: 90%;
+  height: 70%;
+  cursor: pointer;
+  position: relative;
+  border: 0.1rem solid white;
+}
+
+.vvd:hover > span {
+  color: black;
+}
+.vvd span {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.vvd:before {
+  background-color: #fff;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: 0.3s ease-in-out;
+  width: 0;
+  z-index: -1;
+}
+.vvd:hover:before {
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.social-icon img {
+  height: 70%;
+  width: auto;
+  border: 0.1rem solid white;
+  border-radius: 99px;
+  padding: 0.5rem;
+}
+@media screen and (max-width: 750px) {
+  nav > div {
+    width: 95%;
+  }
+  nav > div > div > a {
+    flex-grow: 1;
+    font-size: 1rem;
+    font-weight: 430;
+  }
+  .button {
+    display: relative;
+    flex-grow: 1;
+    text-decoration: none;
+  }
+  nav > div > div > a:nth-child(4) {
+    background-color: red;
+    display: none;
+  }
+  nav > div > div > a:nth-child(5) {
+    display: none;
+  }
 }
 /************ Banner Css ************/
 #home {
+  margin-top: -10vh;
   height: 100vh;
   width: 100vw;
   /* background-image: url("./assets/img/skills-backgroundv8.png"); */
@@ -264,6 +418,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     rgba(0, 0, 0, 0.2) 50%,
     rgba(0, 0, 0, 0.7)
   );
+  overflow: hidden;
 }
 .dimmer {
   height: 100%;
@@ -331,11 +486,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   box-shadow: 0 0 3px rgba(179, 138, 116, 1), 0 0 6px rgba(179, 138, 116, 1),
     0 0 19px rgba(179, 138, 116, 1), 0 0 64px rgba(179, 138, 116, 1);
   /* backdrop-filter: invert(80%) brightness(80%); */
+  color: rgb(225, 225, 225);
 }
 .banner-left-top h1 {
   font-size: 4rem;
   font-weight: bold;
-  color: #9eb9cb;
+  color: rgb(225, 225, 225);
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
 }
@@ -346,7 +502,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner-left-middle h1 {
   font-size: 4rem;
   font-weight: bold;
-  color: #9eb9cb;
+  color: rgb(225, 225, 225);
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
 }
@@ -381,17 +537,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner-left-bottom h5 {
   font-size: 1.6rem;
   padding: 1rem;
-  width: 70%;
+  width: 65%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: justify;
-  color: #9eb9cb;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  backdrop-filter: blur(3px);
+  color: white;
+  line-height: 2.8rem;
+  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000; */
+  /* backdrop-filter: blur(3px); */
   border-radius: 30px;
   /* animation: heading 7s linear infinite; */
+  background: rgba(9, 13, 20, 0.83);
+  font-weight: 400;
 }
 /* @media screen and (max-width: 1300px) {
   @keyframes heading {
@@ -431,6 +590,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 0;
   padding: 1rem;
   position: relative;
+  font-size: 1.1rem;
 }
 .banner-right h6::before {
   content: "(Randomly Api Generated Quote)";
@@ -655,10 +815,31 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 @media screen and (max-width: 750px) {
-  /* .dimmer {
-    background-image: none;
-    background-color: rgb(118, 80, 135);
-  } */
+  .banner-left-top .tagline {
+    background: rgb(13, 44, 89);
+    border: none;
+    box-shadow: none;
+    border-radius: 15px;
+    display: none;
+  }
+  .banner-left-bottom h5 {
+    width: 98%;
+    height: auto;
+    backdrop-filter: blur(1px);
+    border-radius: 30px;
+    border: none;
+    animation: none;
+    font-size: 130%;
+    /* background: rgb(8, 34, 74); */
+    color: white;
+    background: rgba(9, 13, 20, 0.83);
+    border-radius: 15px;
+    padding: 0.3rem 1rem;
+    font-weight: 400;
+    font-size: 1.21rem;
+    line-height: 1.8rem;
+  }
+
   .project-three {
     height: 55%;
     width: 90% !important;
@@ -682,24 +863,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .dimmer {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows:
-      minmax(0, 1fr) minmax(0, 2fr) minmax(0, 0.5fr) minmax(0, 6fr)
+      minmax(0, 1.2fr) minmax(0, 2fr) minmax(0, 0.5fr) minmax(0, 6fr)
       minmax(0, 6fr);
-  }
-  .banner-left-bottom h5 {
-    width: 90%;
-    font-size: 0.9rem;
-    /* height: 100%; */
-    /* border: 0.02rem solid rgba(255, 255, 255, 0.5); */
-  }
-  .banner .tagline {
-    font-size: 1.5rem;
+    /* background-image: none; */
+    /* background-color: rgb(8, 30, 58); */
   }
   .logo-resize {
     height: 3.5rem;
     top: 0vh;
   }
   .dimmer h1 {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    color: white;
   }
   .banner-right {
     height: 100%;
@@ -709,9 +885,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
       minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
       minmax(0, 2fr) minmax(0, 2fr);
     overflow: visible;
+    /* display: none; */
   }
   .banner-right h6::before {
     content: "";
+  }
+  .banner-right h6:nth-child(odd) {
+    color: white;
+  }
+  .nav .navbar {
   }
 }
 
@@ -725,6 +907,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #c4b091;
   text-shadow: -1.3px 1.3px 0 #000, 1.3px 1.3px 0 #000, 1.3px -1.3px 0 #000,
     -1.3px -1.3px 0 #000;
+  overflow: hidden;
 }
 .dimmer2 {
   width: 100vw;
@@ -923,11 +1106,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     flex: 1 1 0px;
     min-width: 90% !important;
   }
-  .banner-left-bottom h5 {
-    width: 90%;
-    backdrop-filter: blur(1px);
-    border-radius: 30px;
-  }
 }
 /*  SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION SKILLS SECTION  */
 #skills {
@@ -937,6 +1115,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* background-repeat: no-repeat; */
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 }
 .dimmer-skills {
   height: 100%;
@@ -1277,10 +1456,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr) minmax(
-        0,
-        1fr
-      );
+    grid-template-rows: 0.1fr 0.8fr 2fr 0.8fr;
   }
   .skills-left-top {
     /* grid-area: one; */
@@ -1347,9 +1523,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 @media screen and (max-width: 750px) {
   .dimmer-skills {
-    grid-template-rows:
-      minmax(0, 1fr) minmax(0, 3fr) minmax(0, 18fr) minmax(0, 3fr)
-      minmax(0, 1fr);
+    grid-template-rows: 0.1fr 3fr 18fr 3fr 1fr;
     gap: 2vh;
   }
   .skills-left-bottom {
@@ -1401,17 +1575,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 /* CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  CONNECT FOOTER  */
 #connect {
-  background-color: #000;
   height: 50vh;
   width: 100vw;
   background: linear-gradient(
-    15deg,
-    rgb(242, 237, 230),
-    rgb(146, 106, 50) 20%,
-    rgba(52, 37, 139, 1) 75%,
-    rgb(75, 3, 152)
+    90deg,
+    rgba(32, 32, 57, 1) 0%,
+    rgba(32, 32, 57, 0.5) 25%,
+    rgba(32, 32, 57, 1) 50%,
+    rgba(32, 32, 57, 0.5) 75%,
+    rgba(32, 32, 57, 1) 100%
   );
-  background-position: center;
+  background-size: 500% 500%;
+  animation: gradient 15s linear infinite;
+  overflow: hidden;
 }
 
 .connect-dimer {
