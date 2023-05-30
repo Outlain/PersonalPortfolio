@@ -95,8 +95,8 @@ export default function Banner() {
 
     useEffect(() => {
 
-        let paragraphWrapper = document.querySelectorAll('.banner-left-bottom > h5');
-        paragraphWrapper = paragraphWrapper[0]
+        // let paragraphWrapper = document.querySelectorAll('.banner-left-bottom > h5');
+        // paragraphWrapper = paragraphWrapper[0]
         const quotesWrapper = document.querySelector('.banner-right');
         const quotesWrapperHeight = document.querySelector('#home').offsetHeight
         const innerQuotesArray = [...quotesWrapper.children]
@@ -541,7 +541,6 @@ export default function Banner() {
                         innerQuotesArray[4].classList.add("banner_right_left_bottom_top_animation");
                         innerQuotesArray[5].classList.add("banner_right_left_bottom_bottom_animation");
                         quotesWrapper.classList.add("glow_animation");
-                        paragraphWrapper.classList.add("glow_animation");
                         clearInterval(scrollingBannerId.current);
                     }
                 } catch (error) {
