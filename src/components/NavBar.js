@@ -4,7 +4,7 @@ import navIcon1 from "../assets/img/nav-icon1.svg"
 
 export const NavBar = () => {
 
-    const [ativeLink, setActivelink] = useState('home');
+    const [activeLink, setActivelink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -33,9 +33,9 @@ export const NavBar = () => {
                 </a>
                 <div className='navbar-toggle-icon'></div>
                 <div>
-                    <a href="#home" className={ativeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home </a>
-                    <a href="#skills" className={ativeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</a>
-                    <a href="#projects" className={ativeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</a>
+                    <a href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home </a>
+                    <a href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</a>
+                    <a href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</a>
                     <a className='social-icon' href='https://github.com/Outlain'><img src={navIcon1} alt=""></img></a>
                     <a className='button' href='#connect'>
                         <button className="vvd">

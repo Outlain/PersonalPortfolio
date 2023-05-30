@@ -1,4 +1,3 @@
-// import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
 import { useState, useEffect, useRef, useMemo } from "react";
 import projectImg1 from "../assets/img/Crypto-Website.png";
 import projectImgGameOne from "../assets/img/fightingGame.png";
@@ -103,13 +102,10 @@ export const Projects = () => {
     const [tabChosenDynamic, setTabChosenDynamic] = useState(false);
     const [tabChosenStatic, setTabChosenStatic] = useState(false);
     // const [currentProjectsParagraph, setCurrentProjectsParagraph] = useState('')
-    const projectsParagraph = `As a full-stack developer, I have built a diverse range of projects with various functionalities and challenges. My skills in back-end technologies such as Node.js, Express, and SQL, as well as my experience in building interactive mini-games with platforms like CANVAS and PyGame, are demonstrated in my portfolio.<br><br>
-
-    In addition, I have integrated real-time functionality using web sockets and have developed APIs to enhance user experiences.<br><br>
-
-    I am adept at creating dynamic websites with full CRUD functionality and API integration, as well as static websites. The duration of these projects has ranged from a few hours to several weeks, allowing me to handle projects of varying scope and complexity.<br><br>
-
-    Through my project experience, I have honed my problem-solving skills and developed expertise in full-stack development, web socket integrations, and API development. These skills have enabled me to build innovative web applications and deliver exceptional user experiences.`
+    const projectsParagraph = `These are my projects I have built so far. <br>
+     Mini-Games are games I have coded from the ground up<br> 
+    Dynamic Websites include wide variety of CRUD, API, Websocket, Databases MySQL ect ... to create a website with a overall theme<br>
+     Static Websites are simple websites created to help in daily tasks or problems or just general styling'`
 
 
 
@@ -402,41 +398,6 @@ export const Projects = () => {
     const paragrpahId = useRef(null);
     const currentProjectPSlice = useRef(1);
     const currentProjectsParagraph = useRef(1);
-
-
-    // useEffect(() => {
-    // function randomNumber() {
-    //     const rand = Math.random();
-    //     if (rand <= 0.85) {
-    //         return Math.floor(Math.random() * (90 - 70 + 1)) + 70;
-    //     } else {
-    //         return Math.floor(Math.random() * (200 - 125 + 1)) + 180;
-    //     }
-    // }
-    // function writeParagraph() {
-    //     // console.log('Running')
-    //     clearInterval(paragrpahId.current);
-    //     paragrpahId.current = setInterval(writeParagraph, differential);
-
-    //     if (currentProjectsParagraph.current.length >= projectsParagraph.length) {
-    //         clearInterval(paragrpahId.current);
-    //     }
-    //     setFixingP(projectsParagraph.slice(0, currentProjectPSlice.current))
-    //     currentProjectsParagraph.current = projectsParagraph.slice(0, currentProjectPSlice.current)
-    //     currentProjectPSlice.current = currentProjectPSlice.current + 1
-    //     if (projectsParagraph[currentProjectPSlice.current - 2] === ',' || projectsParagraph[currentProjectPSlice.current - 2] === '.') {
-    //         setDifferential(650)
-    //     } else {
-    //         setDifferential(randomNumber)
-    //     }
-    // }
-
-    // paragrpahId.current = setInterval(writeParagraph, differential);
-
-    //     return () => {
-    //         clearInterval(paragrpahId.current);
-    //     };
-    // }, [differential]);
 
     const myDivParagraph = useRef(null);
     // const [differential, setDifferential] = useState(Math.floor(Math.random() * (200 - 80 + 1)) + 80)
