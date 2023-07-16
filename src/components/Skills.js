@@ -39,7 +39,7 @@ export const Skills = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth < 980) {
+            if (window.innerWidth < 1055) {
                 setBreaking(<br />)
 
             } else {
