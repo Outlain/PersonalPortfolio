@@ -108,32 +108,38 @@ export const Skills = () => {
                 </div>
                 <div className="skills-left-bottom">
                     <div className="skills-spinning">
-                        <div ref={myDiv} className="skills-spinning-wheel">
-                            <div className="skills-spinning-wheel-inner">
-                                {
-                                    skillsIcons.map((x, index) => {
-                                        return <div key={index} className="skills-spinning-inner-inner">
-                                            <img key={index} src={x.url} alt="img"></img>
-                                        </div>
-                                    })
-                                }
+                        <div className="skills-spinning-outer">
+
+                            <div ref={myDiv} className="skills-spinning-wheel">
+                                <div className="skills-spinning-wheel-inner">
+                                    {
+                                        skillsIcons.map((x, index) => {
+                                            return <div key={index} className="skills-spinning-inner-inner">
+                                                <img key={index} src={x.url} alt="img"></img>
+                                            </div>
+                                        })
+                                    }
+                                </div>
+                            </div>
+
+                            <div className="skills-paragraph-main">
+                                <div className="skills-paragraph-inner">
+                                    <h4>Languages</h4>
+                                    <p>HTML5, CSS, Javascript, JSX, Python, MongoDB, SQL </p>
+                                </div>
+                                <div className="skills-paragraph-inner">
+                                    <h4>Libraries/{breaking}Frameworks</h4>
+                                    <p>Node, Express, React, Flask, JQuery </p>
+                                </div>
+                                <div className="skills-paragraph-inner">
+                                    <h4>Tools/Misc</h4>
+                                    <p>VsCode, Postman, Figma, Git, GitHub, Postgres, Npm </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className="skills-paragraph-main">
-                        <div className="skills-paragraph-inner">
-                            <h4>Languages</h4>
-                            <p>HTML5, CSS, Javascript, JSX, Python, MongoDB, SQL </p>
-                        </div>
-                        <div className="skills-paragraph-inner">
-                            <h4>Libraries/{breaking}Frameworks</h4>
-                            <p>Node, Express, React, Flask, JQuery </p>
-                        </div>
-                        <div className="skills-paragraph-inner">
-                            <h4>Tools/Misc</h4>
-                            <p>VsCode, Postman, Figma, Git, GitHub, Postgres, Npm </p>
-                        </div>
-                    </div>
+
+
                 </div>
                 <div className="skills-right">
                     <div className="skills-resume">

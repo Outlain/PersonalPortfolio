@@ -573,13 +573,13 @@ export default function Banner() {
                 <div className="banner-top"></div>
                 <div className="banner-left-top">
                     <span className="tagline">Welcome to my Portfolio</span>
-                    <h1>Hello, I'm Carlos <br /> Amado Roller</h1>
+                    <h1>I'm Carlos</h1>
                 </div>
                 <div className="banner-left-middle">
                     <h1 className="wrap">{text}</h1>
                 </div>
                 <div className="banner-left-bottom">
-                    <h5> I am a full-stack web developer with expertise in Javascript with React.js, HTML5, CSS3 and MySQL. I graduated from IronHack Miami in 2022 and have many websites and projects I have built from the ground up, as well as industry experience . I am looking forward to working on many future innovative web applications.</h5>
+                    <h5> I am a full-stack web developer with expertise in Javascript, HTML5, CSS3, React.js and MySQL. I graduated from IronHack Miami, have industry experience and a plethora of projects you can check out below.</h5>
                 </div>
                 <div className="banner-right">
                     <h6 className="banner-right-top" >{quotes ? quotes[0].quote : ''} <br /> {quotes ? quotes[0].author : ''}</h6>
